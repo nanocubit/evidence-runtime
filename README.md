@@ -93,6 +93,26 @@ The point of the first arrow: a plain text fetch returns prose, this runtime ret
 facts with selector / backend / content hash, and reports how often the browser and the
 LLM were avoided. See `reports/avoidance_report.json` for the current numbers.
 
+### Trust primitives (0.4.1)
+
+Three mechanisms make the provenance claim auditable rather than rhetorical:
+
+```bash
+# 1. tamper-evident chain over every run (fails closed)
+python scripts/verify_chain.py
+
+# 2. schemas + allowlist from a versioned, trusted file (not from the page)
+cat policies/trusted_policy.json
+ER_REQUIRE_TRUSTED=1 python -m uvicorn evidence_runtime.api:app --port 8090
+
+# 3. the attack register we claim to stop
+python -m pytest tests/test_redteam_fetch.py -q   # 24 cases
+cat docs/REDTEAM.md
+```
+
+Every entry also records the caller context (`X-ER-Context`: caller, tool, policy hash),
+so a run says *who asked and under which policy*, not just what URL was read.
+
 ## Architecture
 
 ```

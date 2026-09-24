@@ -23,6 +23,11 @@
   search layer and a browser in one agent plan.
 - **Headline economics** — `browser_avoidance_rate` / `llm_avoidance_rate` / `provenance_coverage`
   computed from telemetry (`scripts/avoidance_report.py`).
+- **Trust primitives (borrowed from Pearl Necklace, applied to reading)** —
+  hash-chained provenance with fail-closed verification (`chain.py`), schemas/allowlist from a
+  versioned trusted file (`trusted.py` + `policies/trusted_policy.json`), per-call context
+  binding (`X-ER-Context`), and a published red-team register (`docs/REDTEAM.md`, 24 cases).
+  Also fixed a real **SSRF-via-redirect** hole found by that suite.
 
 Still open: ground-truth *scale*, L2 gap-fill tuning, dynamic confidence (§4), domain
 profiles (§6), ML router (§2 Phase 1), cost-per-fact.

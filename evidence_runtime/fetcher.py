@@ -8,8 +8,21 @@ from dataclasses import dataclass
 from typing import Any
 
 import httpx
+from urllib.parse import urljoin
 
 from .policies import FetchPolicy, PolicyError, robots_check, validate_mime, validate_url
+
+_REDIRECT_CODES = (301, 302, 303, 307, 308)
+
+
+def _redirect_target(current: str, response: "httpx.Response") -> str | None:
+    """Resolve a redirect hop, or None when the response is final."""
+    if response.status_code not in _REDIRECT_CODES:
+        return None
+    location = response.headers.get("location")
+    if not location:
+        return None
+    return urljoin(current, location)
 
 
 @dataclass
@@ -90,30 +103,38 @@ def fetch(url: str, policy: FetchPolicy | None = None) -> FetchedDocument:
     timeout = httpx.Timeout(policy.timeout_s, connect=10.0)
     with httpx.Client(
         http2=False,  # set True if h2 installed
-        follow_redirects=True,
-        max_redirects=policy.max_redirects,
+        follow_redirects=False,  # redirects are walked manually so every hop is validated
         timeout=timeout,
         headers={"user-agent": policy.user_agent},
     ) as client:
-        with client.stream("GET", url) as response:
-            response.raise_for_status()
-            validate_mime(response.headers.get("content-type"), policy)
+        current = url
+        for _ in range(policy.max_redirects + 1):
+            # SSRF guard: validate *every* hop, so a public URL cannot bounce us
+            # onto a private/metadata address via 30x.
+            validate_url(current, policy)
+            with client.stream("GET", current) as response:
+                target = _redirect_target(current, response)
+                if target is None:
+                    response.raise_for_status()
+                    validate_mime(response.headers.get("content-type"), policy)
 
-            chunks: list[bytes] = []
-            size = 0
-            for chunk in response.iter_bytes():
-                size += len(chunk)
-                if size > policy.max_bytes:
-                    raise ValueError(f"response exceeds max_bytes={policy.max_bytes}")
-                chunks.append(chunk)
+                    chunks: list[bytes] = []
+                    size = 0
+                    for chunk in response.iter_bytes():
+                        size += len(chunk)
+                        if size > policy.max_bytes:
+                            raise ValueError(f"response exceeds max_bytes={policy.max_bytes}")
+                        chunks.append(chunk)
 
-            body = b"".join(chunks)
-            return _build_document(
-                str(response.url),
-                response.status_code,
-                dict(response.headers),
-                body,
-            )
+                    body = b"".join(chunks)
+                    return _build_document(
+                        str(response.url),
+                        response.status_code,
+                        dict(response.headers),
+                        body,
+                    )
+            current = target
+        raise PolicyError(f"too many redirects (>{policy.max_redirects}): {url}")
 
 
 async def fetch_async(url: str, policy: FetchPolicy | None = None) -> FetchedDocument:
@@ -128,31 +149,37 @@ async def fetch_async(url: str, policy: FetchPolicy | None = None) -> FetchedDoc
     timeout = httpx.Timeout(policy.timeout_s, connect=10.0)
     async with httpx.AsyncClient(
         http2=False,  # set True if h2 installed
-        follow_redirects=True,
-        max_redirects=policy.max_redirects,
+        follow_redirects=False,  # redirects are walked manually so every hop is validated
         timeout=timeout,
         headers={"user-agent": policy.user_agent},
     ) as client:
         from time import perf_counter
+        current = url
         t0 = perf_counter()
-        async with client.stream("GET", url) as response:
-            response.raise_for_status()
-            ttfb_ms = (perf_counter() - t0) * 1000
-            validate_mime(response.headers.get("content-type"), policy)
+        for _ in range(policy.max_redirects + 1):
+            validate_url(current, policy)  # SSRF guard on every hop
+            async with client.stream("GET", current) as response:
+                target = _redirect_target(current, response)
+                if target is None:
+                    response.raise_for_status()
+                    ttfb_ms = (perf_counter() - t0) * 1000
+                    validate_mime(response.headers.get("content-type"), policy)
 
-            chunks: list[bytes] = []
-            size = 0
-            async for chunk in response.aiter_bytes():
-                size += len(chunk)
-                if size > policy.max_bytes:
-                    raise ValueError(f"response exceeds max_bytes={policy.max_bytes}")
-                chunks.append(chunk)
+                    chunks: list[bytes] = []
+                    size = 0
+                    async for chunk in response.aiter_bytes():
+                        size += len(chunk)
+                        if size > policy.max_bytes:
+                            raise ValueError(f"response exceeds max_bytes={policy.max_bytes}")
+                        chunks.append(chunk)
 
-            body = b"".join(chunks)
-            return _build_document(
-                str(response.url),
-                response.status_code,
-                dict(response.headers),
-                body,
-                ttfb_ms=ttfb_ms,
-            )
+                    body = b"".join(chunks)
+                    return _build_document(
+                        str(response.url),
+                        response.status_code,
+                        dict(response.headers),
+                        body,
+                        ttfb_ms=ttfb_ms,
+                    )
+            current = target
+        raise PolicyError(f"too many redirects (>{policy.max_redirects}): {url}")

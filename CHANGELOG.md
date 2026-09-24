@@ -12,6 +12,21 @@
 - Matcher + aggregation moved into `evidence_runtime/evalgt.py` so the measuring device is tested.
 
 ### Added
+- **Tamper-evident provenance chain** (`evidence_runtime/chain.py`): every run appends an entry
+  linked by `prev_hash`, carrying an `evidence_digest` over facts *and* their evidence rows.
+  `scripts/verify_chain.py` walks the chain and **fails closed** on a broken link or tampered
+  entry — "each fact has a proof" becomes checkable instead of asserted.
+- **Trusted-source policy** (`evidence_runtime/trusted.py` + `policies/trusted_policy.json`):
+  schemas and the domain allowlist come from a versioned, reviewable file rather than from the
+  page or the caller; `policy_hash()` pins the revision into responses and chain entries;
+  `ER_REQUIRE_TRUSTED=1` makes the allowlist a hard gate.
+- **Context binding per call**: `X-ER-Context` (caller / tool / policy hash) travels with each
+  request and is recorded in the chain, so an entry says *who asked under which policy*.
+- **Red-team suite + attack register** (`tests/test_redteam_fetch.py`, `docs/REDTEAM.md`):
+  24 cases across SSRF, redirect pivots, MIME, size, robots, chain tampering and policy abuse,
+  plus an explicit "not covered yet" list (DNS rebinding, cross-hop robots, L3 egress).
+- **MCP `extract_page` gained `preset`** — schema resolved from the trusted policy, with the
+  policy hash returned to the caller.
 - **MCP server** (`mcp_server.py`) — stdio tools `extract_page` (schema fields +
   provenance) and `extract_health`; talks to the HTTP service so telemetry has a single
   writer, with an in-process fallback when the service is down.
@@ -30,6 +45,10 @@
   (ER-first measured ~2.7x slower for the same coverage).
 
 ### Fixed
+- **SSRF via redirect.** `follow_redirects=True` let a reachable URL `302` the fetcher onto a
+  private/metadata address — the redirect target was never validated. Redirects are now walked
+  manually with **every hop re-validated** before connecting, loops bounded by `max_redirects`.
+  Proven by `test_every_redirect_hop_is_validated`.
 - **False bot-wall on script config.** `_looks_like_bot_wall` matched markers against the raw
   HTML head, so MediaWiki's `wgConfirmEditCaptchaNeededForGenericEdit` (a `<script>` config
   string) made **every Wikipedia page** look like a bot wall: the run was reported `failed`

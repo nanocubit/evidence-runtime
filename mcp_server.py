@@ -47,9 +47,13 @@ TOOLS = [
             "type": "object",
             "properties": {
                 "url": {"type": "string", "description": "Page URL to extract"},
+                "preset": {
+                    "type": "string",
+                    "description": "Schema preset name resolved from the trusted policy (e.g. article, docs, product). Preferred over an inline schema.",
+                },
                 "schema": {
                     "type": "object",
-                    "description": "Optional {fields:{name:{type,optional}}} schema",
+                    "description": "Optional {fields:{name:{type,optional}}} schema (ignored in strict policy mode)",
                 },
                 "mode": {
                     "type": "string",
@@ -68,16 +72,28 @@ TOOLS = [
 ]
 
 
-def _http_extract(url: str, schema: dict, mode: str, timeout: float = 90.0) -> dict:
+def _http_extract(url: str, schema: dict, mode: str, *, context: dict | None = None,
+                  timeout: float = 90.0) -> dict:
     body = json.dumps({"url": url, "schema": schema, "mode": mode}).encode()
-    req = urllib.request.Request(
-        SERVICE_URL + "/extract",
-        data=body,
-        method="POST",
-        headers={"Content-Type": "application/json", "Accept": "application/json"},
-    )
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    if context:
+        # Context binding: who asked, under which policy — recorded in the chain.
+        headers["X-ER-Context"] = json.dumps(context, ensure_ascii=False)[:2000]
+    req = urllib.request.Request(SERVICE_URL + "/extract", data=body, method="POST", headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", "replace"))
+
+
+def _load_policy():
+    """Trusted policy, or None when unavailable (never fatal on its own)."""
+    try:
+        if REPO_DIR not in sys.path:
+            sys.path.insert(0, REPO_DIR)
+        from evidence_runtime import trusted  # noqa: PLC0415
+
+        return trusted.load()
+    except Exception:  # noqa: BLE001
+        return None
 
 
 def _inprocess_extract(url: str, schema: dict, mode: str) -> dict:
@@ -109,12 +125,43 @@ def call_tool(name: str, args: dict) -> tuple[dict, bool]:
     url = str(args.get("url") or "").strip()
     if not url:
         return {"error": "url is required"}, True
+
+    policy = _load_policy()
+    preset = str(args.get("preset") or "").strip() or None
     schema = args.get("schema") if isinstance(args.get("schema"), dict) else DEFAULT_SCHEMA
+
+    if preset and policy is not None:
+        try:
+            schema = policy.schema_for(preset)  # trusted source, never the caller
+        except Exception as exc:  # noqa: BLE001
+            return {"error": str(exc)}, True
+
+    policy_info: dict = {}
+    if policy is not None:
+        policy_info = {
+            "version": policy.version,
+            "hash": policy.policy_hash(),
+            "preset": preset,
+            "strict": policy.strict,
+        }
+        if policy.strict:
+            try:
+                policy.check_url(url)
+            except Exception as exc:  # noqa: BLE001
+                return {"error": str(exc), "policy": policy_info}, True
+
     mode = args.get("mode") if args.get("mode") in ("auto", "http", "browser") else "auto"
+    context = {
+        "caller": "evidence-runtime-mcp",
+        "preset": preset,
+        "policy_hash": policy_info.get("hash", ""),
+    }
 
     try:
-        result = _http_extract(url, schema, mode)
+        result = _http_extract(url, schema, mode, context=context)
         result["_via"] = "service"
+        if policy_info:
+            result["policy"] = policy_info
         return result, False
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError):
         pass

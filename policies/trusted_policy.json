@@ -1,0 +1,46 @@
+{
+  "version": "2026-09-24.1",
+  "comment": "Trusted-source policy: schemas + allowlist live here (reviewed, versioned), never on the page. strict=true (or ER_REQUIRE_TRUSTED=1) turns the allowlist into a hard gate.",
+  "strict": false,
+  "allow_domains": [
+    "docs.python.org",
+    "fastapi.tiangolo.com",
+    "docs.djangoproject.com",
+    "developer.mozilla.org",
+    "web.dev",
+    "css-tricks.com",
+    "habr.com",
+    "*.wikipedia.org",
+    "*.nature.com",
+    "example.com",
+    "example.org"
+  ],
+  "schemas": {
+    "article": {
+      "fields": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "main_text": {"type": "string"},
+        "author": {"type": "string", "optional": true},
+        "publish_date": {"type": "string", "optional": true}
+      }
+    },
+    "docs": {
+      "fields": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "main_text": {"type": "string"},
+        "version": {"type": "string", "optional": true}
+      }
+    },
+    "product": {
+      "fields": {
+        "name": {"type": "string"},
+        "price": {"type": "string", "optional": true},
+        "currency": {"type": "string", "optional": true},
+        "brand": {"type": "string", "optional": true},
+        "availability": {"type": "string", "optional": true}
+      }
+    }
+  }
+}

@@ -5,9 +5,11 @@ from __future__ import annotations
 import asyncio
 import time
 from time import perf_counter
+from typing import Any
 
 from .browser import fetch_browser, playwright_available
 from .cache import get_cache
+from .chain import append as chain_append
 from .extract import extract_l1
 from .fetcher import fetch_async
 from .llm_fill import fill_missing_fields, llm_fill_available
@@ -201,6 +203,7 @@ async def extract_async(
     save_snapshot: bool = True,
     debug: bool = False,
     use_cache: bool = True,
+    context: dict[str, Any] | None = None,
 ) -> ExtractionRun:
     t0 = perf_counter()
     url = str(req.url)
@@ -510,5 +513,11 @@ async def extract_async(
             RunStore(db_path).save(run)
         except Exception:
             pass
+        # Tamper-evident provenance chain (real runs only; tests use :memory:).
+        if save_snapshot and db_path != ":memory:":
+            try:
+                chain_append(run, context=context)
+            except Exception:
+                pass  # the chain must never break an extraction
 
     return run
