@@ -1,16 +1,32 @@
 """Headline economics from runtime telemetry (importable, testable).
 
 `scripts/avoidance_report.py` is a thin CLI over :func:`build_report`.
+
+DuckDB allows a single writer, so while the HTTP service is running the file is
+locked and a plain read-only connect fails. `build_report` therefore falls back
+to reading a snapshot copy — metrics stay readable without stopping the service.
 """
 
 from __future__ import annotations
 
+import shutil
+import tempfile
 from collections import Counter
+from pathlib import Path
 
 import duckdb
 
 BROWSER_LEVELS = {"L3", "L4"}
 LLM_MARKERS = ("l2_llm_fill", "l2_failed")
+
+# A live writer surfaces either of these depending on whether it is in-process
+# (ConnectionException) or another process (IOException).
+_LOCK_ERRORS = tuple(
+    err for err in (
+        getattr(duckdb, "IOException", None),
+        getattr(duckdb, "ConnectionException", None),
+    ) if err is not None
+)
 
 
 def _rate(part: int, total: int) -> float:
@@ -19,6 +35,20 @@ def _rate(part: int, total: int) -> float:
 
 def build_report(db_path: str) -> dict:
     """Aggregate browser/LLM avoidance and provenance coverage from telemetry."""
+    try:
+        return _read(db_path)
+    except _LOCK_ERRORS:
+        # The service holds the write lock; snapshot the file (and its WAL) and read that.
+        with tempfile.TemporaryDirectory() as tmp:
+            snap = Path(tmp) / "telemetry.duckdb"
+            shutil.copy2(db_path, snap)
+            wal = Path(str(db_path) + ".wal")
+            if wal.exists():
+                shutil.copy2(wal, Path(str(snap) + ".wal"))
+            return _read(str(snap))
+
+
+def _read(db_path: str) -> dict:
     con = duckdb.connect(db_path, read_only=True)
     try:
         rows = con.execute(

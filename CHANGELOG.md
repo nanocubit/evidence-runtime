@@ -25,8 +25,17 @@
   (plain httpx + trafilatura metadata, same URLs and required fields):
   **L1 100.0% vs 30.5% completeness, 5045 ms vs 1412 ms** on a 6-URL sample.
 - Tests: `tests/test_router.py`, `tests/test_metrics_honesty.py` — suite now **51 passed / 3 skipped**.
+- A/B harness results (14 URLs, ER vs naive HTTP) informed the reading policy now used by the
+  search layer: **HTTP → ER → browser** by default, ER-first only for `evidence=true`
+  (ER-first measured ~2.7x slower for the same coverage).
 
 ### Fixed
+- **False bot-wall on script config.** `_looks_like_bot_wall` matched markers against the raw
+  HTML head, so MediaWiki's `wgConfirmEditCaptchaNeededForGenericEdit` (a `<script>` config
+  string) made **every Wikipedia page** look like a bot wall: the run was reported `failed`
+  while still extracting ~190k chars. Markers are now matched against *visible* text only,
+  and challenge titles match by substring (`Attention Required! | Cloudflare`). Coverage on
+  the 14-URL A/B set went 9/14 → 10/14. Regression tests: `tests/test_bot_wall.py`.
 - `normalize_html` crashed on a valueless `<a href>` (selectolax yields `{'href': None}`,
   and `dict.get("href", "")` still returns `None`) — because snapshotting is on by default
   in the service, **every such page was reported `failed`**. Found by the first HTTP-service

@@ -56,6 +56,22 @@ def test_build_report_counts_avoidance_and_provenance(tmp_path):
     assert r["p50_latency_ms"] > 0
 
 
+def test_build_report_reads_through_locked_db(tmp_path):
+    """A running service holds the write lock; report must still be readable."""
+    db = tmp_path / "locked.duckdb"
+    _seed(str(db))
+
+    writer = duckdb.connect(str(db))  # simulate the live service
+    writer.execute("INSERT INTO runs VALUES (?,?,?,?,?)", ("r5", "L1", "success", 500.0, '[]'))
+    try:
+        r = build_report(str(db))
+    finally:
+        writer.close()
+
+    assert r["total_runs"] >= 4
+    assert 0.0 <= r["browser_avoidance_rate"] <= 1.0
+
+
 def test_build_report_empty_db_is_safe(tmp_path):
     db = tmp_path / "empty.duckdb"
     con = duckdb.connect(str(db))

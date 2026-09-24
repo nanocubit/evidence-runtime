@@ -169,14 +169,28 @@ _BOT_WALL_MARKERS = (
     "enable javascript and cookies",
 )
 
+# Scripts/styles are excluded before bot-wall matching (see _looks_like_bot_wall).
+_SCRIPT_STYLE_RE = re.compile(r"<(script|style)\b.*?</\1>", re.IGNORECASE | re.DOTALL)
+
+_BOT_WALL_TITLES = (
+    "robot or human",
+    "access denied",
+    "attention required",
+    "just a moment",
+)
+
 
 def _looks_like_bot_wall(html_text: str, title_guess: str | None = None) -> bool:
-    low = (html_text or "")[:8000].lower()
-    if any(m in low for m in _BOT_WALL_MARKERS):
+    # Match markers against *visible* text only: challenge copy is rendered, whereas
+    # strings like MediaWiki's `wgConfirmEditCaptchaNeededForGenericEdit` live in a
+    # <script> config and used to make every Wikipedia page look bot-walled.
+    visible = _SCRIPT_STYLE_RE.sub(" ", (html_text or "")[:20000]).lower()
+    if any(m in visible for m in _BOT_WALL_MARKERS):
         return True
-    if title_guess and title_guess.strip().lower() in {
-        "robot or human?", "access denied", "attention required", "just a moment...",
-    }:
+    title_low = (title_guess or "").strip().lower()
+    # Real challenge titles carry decoration ("Attention Required! | Cloudflare"),
+    # so match on substring rather than equality.
+    if title_low and any(phrase in title_low for phrase in _BOT_WALL_TITLES):
         return True
     return False
 
