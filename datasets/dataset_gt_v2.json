@@ -1,0 +1,1708 @@
+{
+  "metadata": {
+    "name": "evidence_runtime_gt_v2",
+    "version": "2.1",
+    "created": "2026-08-08",
+    "purpose": "Precision GT ~60 soft matchers post L1 freeze",
+    "matchers": [
+      "equals",
+      "contains",
+      "in",
+      "range",
+      "min_len"
+    ],
+    "n_items": 60,
+    "parent": "dataset_gt v1 (12 items)",
+    "updated": "2026-08-08"
+  },
+  "items": [
+    {
+      "id": "gt_docs_py_asyncio",
+      "class": "docs",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "asyncio"
+          ]
+        },
+        "version": {
+          "in": [
+            "3",
+            "3.12",
+            "3.13",
+            "3.14"
+          ]
+        },
+        "source": {
+          "contains": [
+            "python"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_django",
+      "class": "docs",
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Model"
+          ]
+        },
+        "version": {
+          "in": [
+            "5.0",
+            "5"
+          ]
+        },
+        "source": {
+          "contains": [
+            "django"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_fastapi",
+      "class": "docs",
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "source": {
+          "contains": [
+            "fastapi"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_mdn_fetch",
+      "class": "docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Fetch"
+          ]
+        },
+        "description": {
+          "min_len": 20
+        }
+      }
+    },
+    {
+      "id": "gt_docs_docker",
+      "class": "docs",
+      "url": "https://docs.docker.com/get-started/overview/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Docker"
+          ]
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_docs_react",
+      "class": "docs",
+      "url": "https://react.dev/learn/thinking-in-react",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "React"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_docs_k8s",
+      "class": "docs",
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "source": {
+          "contains": [
+            "Kubernetes"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_sqla",
+      "class": "docs",
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "ORM"
+          ]
+        },
+        "version": {
+          "in": [
+            "20",
+            "2.0",
+            "2"
+          ]
+        },
+        "source": {
+          "contains": [
+            "sqlalchemy"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_pydantic",
+      "class": "docs",
+      "url": "https://docs.pydantic.dev/latest/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "optional": true
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Pydantic"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_ikea_kallax",
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "KALLAX"
+          ]
+        },
+        "brand": {
+          "equals": "IKEA"
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            20,
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_ikea_malm",
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "MALM"
+          ]
+        },
+        "brand": {
+          "equals": "IKEA"
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            50,
+            800
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_ikea_billy",
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-00263850/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "BILLY"
+          ]
+        },
+        "brand": {
+          "equals": "IKEA"
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            20,
+            300
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_nike_af1",
+      "class": "product",
+      "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr/CW2288-111",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "Air Force"
+          ]
+        },
+        "brand": {
+          "equals": "Nike"
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            50,
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_dell_xps",
+      "class": "product",
+      "url": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9340-laptop",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "XPS"
+          ]
+        },
+        "brand": {
+          "equals": "Dell"
+        },
+        "currency": {
+          "equals": "USD"
+        }
+      }
+    },
+    {
+      "id": "gt_prod_samsung_s24",
+      "class": "product",
+      "url": "https://www.samsung.com/us/smartphones/galaxy-s24-ultra/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "Galaxy"
+          ]
+        },
+        "brand": {
+          "equals": "Samsung"
+        },
+        "currency": {
+          "equals": "USD"
+        }
+      }
+    },
+    {
+      "id": "gt_prod_steam_cs2",
+      "class": "product",
+      "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "Counter"
+          ]
+        },
+        "brand": {
+          "equals": "Steam"
+        },
+        "currency": {
+          "equals": "USD"
+        }
+      }
+    },
+    {
+      "id": "gt_prod_amazon",
+      "class": "product",
+      "url": "https://www.amazon.com/dp/B0DGHMNQ5Z",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "min_len": 3
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            1,
+            5000
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_art_habr",
+      "class": "article",
+      "url": "https://habr.com/ru/articles/778312/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "author": {
+          "min_len": 2
+        },
+        "publish_date": {
+          "min_len": 4
+        }
+      }
+    },
+    {
+      "id": "gt_art_css_tricks",
+      "class": "article",
+      "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Flexbox"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      },
+      "notes": "replaces SciAm"
+    },
+    {
+      "id": "gt_art_webdev",
+      "class": "article",
+      "url": "https://web.dev/articles/vitals",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Vital"
+          ]
+        },
+        "description": {
+          "min_len": 20
+        }
+      }
+    },
+    {
+      "id": "gt_art_nature",
+      "class": "article",
+      "url": "https://www.nature.com/articles/d41586-024-00168-8",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 10
+        },
+        "publish_date": {
+          "contains": [
+            "2024"
+          ]
+        },
+        "description": {
+          "min_len": 20
+        }
+      }
+    },
+    {
+      "id": "gt_art_cf",
+      "class": "article",
+      "url": "https://blog.cloudflare.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Cloudflare"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_art_gh",
+      "class": "article",
+      "url": "https://github.blog/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "GitHub"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_art_arxiv",
+      "class": "article",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Attention"
+          ]
+        },
+        "author": {
+          "min_len": 3
+        },
+        "publish_date": {
+          "contains": [
+            "2017"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_art_k8s_v132",
+      "class": "article",
+      "url": "https://kubernetes.io/blog/2024/12/11/kubernetes-v1-32-release/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_ref_wiki_ai",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Artificial"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_ref_wiki_py",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Python"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_ref_wiki_climate",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Climate_change",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Climate"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_ref_wiki_france",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/France",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "France"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_ref_worldometers",
+      "class": "reference",
+      "url": "https://www.worldometers.info/world-population/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Population"
+          ]
+        },
+        "source": {
+          "contains": [
+            "Worldometer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_ref_owid",
+      "class": "reference",
+      "url": "https://ourworldindata.org/grapher/life-expectancy",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "source": {
+          "min_len": 3
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_ref_cia",
+      "class": "reference",
+      "url": "https://www.cia.gov/the-world-factbook/countries/united-states/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_ref_worldbank",
+      "class": "reference",
+      "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_ref_numbeo",
+      "class": "reference",
+      "url": "https://www.numbeo.com/cost-of-living/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Cost"
+          ]
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_ref_who",
+      "class": "reference",
+      "url": "https://www.who.int/health-topics/coronavirus",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_spa_notion",
+      "class": "spa",
+      "url": "https://www.notion.so/product",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Notion"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_figma",
+      "class": "spa",
+      "url": "https://www.figma.com/pricing/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Figma"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_trello",
+      "class": "spa",
+      "url": "https://trello.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "description": {
+          "min_len": 10
+        }
+      },
+      "notes": "soft title: marketing pages often use tagline as og:title"
+    },
+    {
+      "id": "gt_spa_dropbox",
+      "class": "spa",
+      "url": "https://www.dropbox.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "description": {
+          "min_len": 10
+        }
+      },
+      "notes": "soft title: marketing pages often use tagline as og:title"
+    },
+    {
+      "id": "gt_spa_vscode",
+      "class": "spa",
+      "url": "https://github.com/microsoft/vscode",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "vscode"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_spotify",
+      "class": "spa",
+      "url": "https://www.spotify.com/us/download/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "description": {
+          "min_len": 10
+        }
+      },
+      "notes": "soft title: marketing pages often use tagline as og:title"
+    },
+    {
+      "id": "gt_spa_hn",
+      "class": "spa",
+      "url": "https://news.ycombinator.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Hacker News"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_spa_airbnb",
+      "class": "spa",
+      "url": "https://www.airbnb.com/s/Paris/homes",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "description": {
+          "min_len": 5
+        }
+      }
+    },
+    {
+      "id": "gt_spa_vercel",
+      "class": "spa",
+      "url": "https://vercel.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Vercel"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_docs_py_tutorial",
+      "class": "docs",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Tutorial"
+          ]
+        },
+        "version": {
+          "in": [
+            "3",
+            "3.12",
+            "3.13",
+            "3.14"
+          ]
+        },
+        "source": {
+          "contains": [
+            "python"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_docs_flask",
+      "class": "docs",
+      "url": "https://flask.palletsprojects.com/en/3.0.x/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Flask"
+          ]
+        },
+        "source": {
+          "min_len": 3
+        }
+      },
+      "notes": "version path 3.0.x supported in extractor; GT not requiring"
+    },
+    {
+      "id": "gt_docs_pytest",
+      "class": "docs",
+      "url": "https://docs.pytest.org/en/stable/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "pytest"
+          ]
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_docs_numpy",
+      "class": "docs",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 5
+        },
+        "source": {
+          "min_len": 3
+        }
+      }
+    },
+    {
+      "id": "gt_prod_ikea_lack",
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/lack-side-table-white-30449908/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "LACK"
+          ]
+        },
+        "brand": {
+          "equals": "IKEA"
+        },
+        "currency": {
+          "equals": "USD"
+        },
+        "price": {
+          "range": [
+            5,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "id": "gt_prod_steam_dota",
+      "class": "product",
+      "url": "https://store.steampowered.com/app/570/Dota_2/",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "name": {
+          "contains": [
+            "Dota"
+          ]
+        },
+        "currency": {
+          "equals": "USD"
+        }
+      },
+      "notes": "brand domain heuristic may need store.steampowered host match"
+    },
+    {
+      "id": "gt_art_google_blog",
+      "class": "article",
+      "url": "https://blog.google/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_art_bbc",
+      "class": "article",
+      "url": "https://www.bbc.com/news",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_art_techcrunch",
+      "class": "article",
+      "url": "https://techcrunch.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "TechCrunch"
+          ]
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_art_verge",
+      "class": "article",
+      "url": "https://www.theverge.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 3
+        },
+        "description": {
+          "min_len": 10
+        }
+      },
+      "notes": "og:title may be campaign tagline"
+    },
+    {
+      "id": "gt_ref_wiki_ml",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "Machine"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_ref_wiki_http",
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/HTTP",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "contains": [
+            "HTTP"
+          ]
+        },
+        "source": {
+          "contains": [
+            "wikipedia"
+          ]
+        },
+        "description": {
+          "min_len": 30
+        }
+      }
+    },
+    {
+      "id": "gt_spa_stripe",
+      "class": "spa",
+      "url": "https://stripe.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 4
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_shopify",
+      "class": "spa",
+      "url": "https://www.shopify.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 4
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_linear",
+      "class": "spa",
+      "url": "https://linear.app/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 4
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    },
+    {
+      "id": "gt_spa_slack",
+      "class": "spa",
+      "url": "https://slack.com/",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": {
+        "title": {
+          "min_len": 4
+        },
+        "description": {
+          "min_len": 10
+        }
+      }
+    }
+  ]
+}
