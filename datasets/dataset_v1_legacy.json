@@ -1,0 +1,1090 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-08-07",
+    "classes": [
+      "article",
+      "product",
+      "docs",
+      "reference",
+      "spa"
+    ],
+    "total_items": 50,
+    "ground_truth_status": "none",
+    "ground_truth_method": "Run collect_ground_truth.py, then manually verify and fill expected_values",
+    "updated": "2026-08-08",
+    "note": "Replaced 20 dead/blocked URLs after curl probe 2026-08-08; v3: robots.txt, L0 cache, microdata, domain heuristics; replaced 19 items/schemas"
+  },
+  "items": [
+    {
+      "url": "https://blog.cloudflare.com/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://arstechnica.com/gadgets/]"
+    },
+    {
+      "url": "https://github.blog/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.bbc.com/news/technology]"
+    },
+    {
+      "url": "https://kubernetes.io/blog/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.theguardian.com/technology]"
+    },
+    {
+      "url": "https://habr.com/ru/articles/778312/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Habr Article'"
+    },
+    {
+      "url": "https://devblogs.microsoft.com/python/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.wired.com/category/business/]"
+    },
+    {
+      "url": "https://web.dev/articles/vitals",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.space.com/news]"
+    },
+    {
+      "url": "https://developer.chrome.com/blog",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.theverge.com/tech]"
+    },
+    {
+      "url": "https://www.nature.com/articles/d41586-024-00168-8",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://www.nature.com/news]"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/what-is-consciousness/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'What is Consciousness'"
+    },
+    {
+      "url": "https://www.python.org/about/",
+      "class": "article",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Concrete article/blog page [was section: https://techcrunch.com/]"
+    },
+    {
+      "url": "https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected name contains: 'Malm', brand: 'bed frame'"
+    },
+    {
+      "url": "https://www.apple.com/iphone/",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected name contains: 'iPhone', brand: 'Apple'"
+    },
+    {
+      "url": "https://www.samsung.com/us/smartphones/galaxy-s24-ultra/",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected name contains: 'Galaxy S24 Ultra', brand: 'Samsung'"
+    },
+    {
+      "url": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9340-laptop",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected name contains: 'XPS 13', brand: 'Dell'"
+    },
+    {
+      "url": "https://store.google.com/product/pixel_9_pro",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Google Pixel 9 Pro product [replaced dead URL]"
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0DGHMNQ5Z",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Amazon product page [replaced dead URL]"
+    },
+    {
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "IKEA KALLAX shelf [replaced dead URL]"
+    },
+    {
+      "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr/CW2288-111",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Nike Air Force 1 product [replaced dead URL]"
+    },
+    {
+      "url": "https://www.walmart.com/ip/Apple-AirPods-Pro-2nd-Generation/1752680599",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Walmart AirPods Pro [replaced dead URL]"
+    },
+    {
+      "url": "https://shop.samsung.com/us/offer/galaxy-s25",
+      "class": "product",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Samsung Galaxy S25 offer [replaced dead URL]"
+    },
+    {
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'asyncio', source: 'Python'"
+    },
+    {
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Models', source: 'Django'"
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Tutorial', source: 'FastAPI'"
+    },
+    {
+      "url": "https://docs.rust-lang.org/book/ch01-00-getting-started.html",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Getting Started', source: 'Rust'"
+    },
+    {
+      "url": "https://docs.pydantic.dev/latest/",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Pydantic', source: 'Python'"
+    },
+    {
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Quickstart', source: 'SQLAlchemy'"
+    },
+    {
+      "url": "https://docs.docker.com/get-started/overview/",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Docker overview', source: 'Docker'"
+    },
+    {
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Overview', source: 'Kubernetes'"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Fetch API', source: 'MDN'"
+    },
+    {
+      "url": "https://react.dev/learn/thinking-in-react",
+      "class": "docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Thinking in React', source: 'React'"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Artificial intelligence', source: 'Wikipedia'"
+    },
+    {
+      "url": "https://www.worldometers.info/world-population/",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'World Population', source: 'Worldometers'"
+    },
+    {
+      "url": "https://ourworldindata.org/grapher/life-expectancy",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Life Expectancy', source: 'Our World in Data'"
+    },
+    {
+      "url": "https://www.cia.gov/the-world-factbook/countries/united-states/",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'United States', source: 'CIA Factbook'"
+    },
+    {
+      "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Population', source: 'World Bank'"
+    },
+    {
+      "url": "https://www.who.int/health-topics/coronavirus",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "WHO coronavirus topic [replaced dead URL]"
+    },
+    {
+      "url": "https://www.numbeo.com/cost-of-living/",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Cost of Living', source: 'Numbeo'"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/France",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Wikipedia France [replaced dead URL]"
+    },
+    {
+      "url": "https://www.nationalgeographic.com/animals/mammals/facts/giraffe",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Giraffe', source: 'NatGeo'"
+    },
+    {
+      "url": "https://www.nasa.gov/",
+      "class": "reference",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "NASA home — reference-like [replaced IMDb bot-wall]"
+    },
+    {
+      "url": "https://www.airbnb.com/s/Paris/homes",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Paris', source: 'Airbnb'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.booking.com/searchresults.html?ss=Paris",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Paris', source: 'Booking'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://github.com/microsoft/vscode",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Visual Studio Code', source: 'GitHub'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://news.ycombinator.com/",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Hacker News — SPA-ish listing [replaced dead URL] [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.google.com/maps/place/Eiffel+Tower",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Eiffel Tower', source: 'Google Maps'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.spotify.com/us/download/",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Spotify', source: 'Spotify'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.notion.so/product",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Notion', source: 'Notion'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.figma.com/pricing/",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Expected title contains: 'Figma', source: 'Figma'. NOTE: SPA pages — expect L1/L2 failure, L3/L4 required. [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://trello.com/",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Trello product SPA [replaced dead URL] [dynamic_content removed: requires L3]"
+    },
+    {
+      "url": "https://www.dropbox.com/",
+      "class": "spa",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "notes": "Dropbox marketing SPA [replaced dead URL] [dynamic_content removed: requires L3]"
+    }
+  ]
+}

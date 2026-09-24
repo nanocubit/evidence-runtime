@@ -1,0 +1,1192 @@
+{
+  "metadata": {
+    "name": "evidence_runtime_l1_v3",
+    "version": "3.0",
+    "created": "2026-08-08",
+    "purpose": "Expanded L1 completeness set based on v2 + extras",
+    "n_items": 47,
+    "parent": "dataset_v2"
+  },
+  "schemas": {
+    "article": {
+      "fields": {
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "publish_date": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "product": {
+      "fields": {
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "availability": {
+          "type": "boolean"
+        }
+      }
+    },
+    "docs": {
+      "fields": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "reference": {
+      "fields": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "spa": {
+      "fields": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "class": "docs",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "notes": "Stable Python docs; version from path /3/",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_35416599"
+    },
+    {
+      "class": "docs",
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "notes": "Django 5.0 models page",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_98318946"
+    },
+    {
+      "class": "docs",
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "notes": "FastAPI first steps",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_50524463"
+    },
+    {
+      "class": "docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "notes": "MDN Fetch API",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_19812976"
+    },
+    {
+      "class": "docs",
+      "url": "https://docs.docker.com/get-started/overview/",
+      "notes": "Docker get started",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_55451625"
+    },
+    {
+      "class": "docs",
+      "url": "https://react.dev/learn/thinking-in-react",
+      "notes": "React learn page",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_76824769"
+    },
+    {
+      "class": "docs",
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "notes": "K8s concepts overview",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_37496421"
+    },
+    {
+      "class": "docs",
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "notes": "SQLAlchemy 2.0 quickstart; version from path",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_02854243"
+    },
+    {
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "notes": "IKEA KALLAX — rich JSON-LD",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_74057337"
+    },
+    {
+      "class": "product",
+      "url": "https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/",
+      "notes": "IKEA MALM bed",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_26590106"
+    },
+    {
+      "class": "product",
+      "url": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9340-laptop",
+      "notes": "Dell XPS 13 PDP",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_44319570"
+    },
+    {
+      "class": "product",
+      "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr/CW2288-111",
+      "notes": "Nike AF1 — __NEXT_DATA__ price",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_14968143"
+    },
+    {
+      "class": "product",
+      "url": "https://www.amazon.com/dp/B0DGHMNQ5Z",
+      "notes": "Amazon PDP",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_74773721"
+    },
+    {
+      "class": "product",
+      "url": "https://www.samsung.com/us/smartphones/galaxy-s24-ultra/",
+      "notes": "Samsung Galaxy S24 Ultra",
+      "expected_l1": 0.8,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_25701762"
+    },
+    {
+      "class": "product",
+      "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
+      "notes": "Steam CS2 store page",
+      "expected_l1": 0.6,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_88227221"
+    },
+    {
+      "class": "product",
+      "url": "https://www.walmart.com/ip/Apple-AirPods-Pro-2nd-Generation/1752680599",
+      "notes": "Walmart AirPods — may be thin HTML",
+      "expected_l1": 0.6,
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_04345699"
+    },
+    {
+      "class": "article",
+      "url": "https://habr.com/ru/articles/778312/",
+      "notes": "Habr article with author+date",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_68216194"
+    },
+    {
+      "class": "article",
+      "url": "https://www.scientificamerican.com/article/what-is-consciousness/",
+      "notes": "SciAm longform",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_14937217"
+    },
+    {
+      "class": "article",
+      "url": "https://web.dev/articles/vitals",
+      "notes": "web.dev vitals article",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_61326937"
+    },
+    {
+      "class": "article",
+      "url": "https://www.nature.com/articles/d41586-024-00168-8",
+      "notes": "Nature news article",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_19214242"
+    },
+    {
+      "class": "article",
+      "url": "https://blog.cloudflare.com/",
+      "notes": "Cloudflare blog index (hub)",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_93349279"
+    },
+    {
+      "class": "article",
+      "url": "https://github.blog/",
+      "notes": "GitHub blog index",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_50464652"
+    },
+    {
+      "class": "article",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "notes": "Attention Is All You Need abstract",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_16637278"
+    },
+    {
+      "class": "article",
+      "url": "https://devblogs.microsoft.com/python/",
+      "notes": "MS Python blog hub",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_08153637"
+    },
+    {
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "notes": "Wikipedia AI",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_14899342"
+    },
+    {
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "notes": "Wikipedia Python",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_38651591"
+    },
+    {
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/Climate_change",
+      "notes": "Wikipedia climate",
+      "expected_l1": 0.75,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_82603600"
+    },
+    {
+      "class": "reference",
+      "url": "https://www.worldometers.info/world-population/",
+      "notes": "Worldometers population",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_26883661"
+    },
+    {
+      "class": "reference",
+      "url": "https://ourworldindata.org/grapher/life-expectancy",
+      "notes": "OWID life expectancy",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_36632111"
+    },
+    {
+      "class": "reference",
+      "url": "https://www.cia.gov/the-world-factbook/countries/united-states/",
+      "notes": "CIA Factbook US",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_49224617"
+    },
+    {
+      "class": "reference",
+      "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+      "notes": "World Bank population indicator",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_55032743"
+    },
+    {
+      "class": "reference",
+      "url": "https://www.numbeo.com/cost-of-living/",
+      "notes": "Numbeo cost of living",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_87063188"
+    },
+    {
+      "class": "spa",
+      "url": "https://www.notion.so/product",
+      "notes": "Notion product — Next.js",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_76025620"
+    },
+    {
+      "class": "spa",
+      "url": "https://www.figma.com/pricing/",
+      "notes": "Figma pricing",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_08920855"
+    },
+    {
+      "class": "spa",
+      "url": "https://trello.com/",
+      "notes": "Trello marketing",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_02211294"
+    },
+    {
+      "class": "spa",
+      "url": "https://www.dropbox.com/",
+      "notes": "Dropbox home",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_56990098"
+    },
+    {
+      "class": "spa",
+      "url": "https://github.com/microsoft/vscode",
+      "notes": "GitHub vscode repo",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_82891947"
+    },
+    {
+      "class": "spa",
+      "url": "https://www.spotify.com/us/download/",
+      "notes": "Spotify download",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_83645225"
+    },
+    {
+      "class": "spa",
+      "url": "https://news.ycombinator.com/",
+      "notes": "Hacker News — minimal meta",
+      "expected_l1": 0.5,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_40247231"
+    },
+    {
+      "class": "spa",
+      "url": "https://www.airbnb.com/s/Paris/homes",
+      "notes": "Airbnb search SPA",
+      "expected_l1": 1.0,
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_01122527"
+    },
+    {
+      "class": "docs",
+      "url": "https://docs.pydantic.dev/latest/",
+      "notes": "Pydantic latest",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_64951115",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "docs",
+      "url": "https://numpy.org/doc/stable/",
+      "notes": "NumPy stable docs",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "docs_38462100",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "article",
+      "url": "https://kubernetes.io/blog/",
+      "notes": "K8s blog hub",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "article_30436356",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "reference",
+      "url": "https://en.wikipedia.org/wiki/France",
+      "notes": "Wiki France",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_26851716",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "reference",
+      "url": "https://www.who.int/health-topics/coronavirus",
+      "notes": "WHO",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "reference_97485626",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "spa",
+      "url": "https://vercel.com/",
+      "notes": "Vercel Next.js",
+      "schema": {
+        "fields": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "spa_02505049",
+      "expected_l1": 0.8
+    },
+    {
+      "class": "product",
+      "url": "https://store.steampowered.com/app/570/Dota_2/",
+      "notes": "Steam Dota 2",
+      "schema": {
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "expected_values": null,
+      "id": "product_44076563",
+      "expected_l1": 0.8
+    }
+  ]
+}
