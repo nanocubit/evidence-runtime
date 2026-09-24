@@ -5,5 +5,5 @@ trafilatura>=1.8
 extruct>=0.16
 duckdb>=0.10
 lxml>=5.0
-python-dateutil>=2.9
+python-dateutil>=2.9.0.post0
 pytest>=8.0
