@@ -1,0 +1,804 @@
+{
+  "summary": {
+    "total": 10,
+    "reachable": 8,
+    "overall_completeness": 0.8,
+    "reachable_completeness": 1.0,
+    "status_counts": {
+      "success": 3,
+      "partial": 5,
+      "failed": 2
+    },
+    "by_class": {
+      "docs": {
+        "n": 8,
+        "avg_completeness": 1.0,
+        "success": 3,
+        "partial": 5,
+        "failed": 0,
+        "fetch_fail": 0,
+        "needs_browser": 0,
+        "p50_latency_ms": 3631.8,
+        "field_hits": {
+          "description": 8,
+          "source": 8,
+          "title": 8,
+          "version": 3
+        },
+        "field_misses": {},
+        "methods": {
+          "og_manual": 6,
+          "meta_og": 10,
+          "trafilatura": 18,
+          "url_derived": 6,
+          "css_selector": 1,
+          "json-ld": 2,
+          "microdata": 3,
+          "docs_lead": 1
+        },
+        "tactics": {
+          "docs": 8
+        }
+      },
+      "product": {
+        "n": 2,
+        "avg_completeness": 0.0,
+        "success": 0,
+        "partial": 0,
+        "failed": 2,
+        "fetch_fail": 2,
+        "needs_browser": 0,
+        "p50_latency_ms": 489.9,
+        "field_hits": {},
+        "field_misses": {
+          "name": 2,
+          "price": 2,
+          "currency": 2,
+          "brand": 2,
+          "availability": 2
+        },
+        "methods": {},
+        "tactics": {}
+      }
+    },
+    "methods_total": {
+      "og_manual": 6,
+      "meta_og": 10,
+      "trafilatura": 18,
+      "url_derived": 6,
+      "css_selector": 1,
+      "json-ld": 2,
+      "microdata": 3,
+      "docs_lead": 1
+    },
+    "usable": 8,
+    "usable_rate": 0.8,
+    "completeness_by_status": {
+      "success": 1.0,
+      "partial": 1.0,
+      "failed": 0.0,
+      "unresolved": 0.0,
+      "error": 0.0
+    },
+    "failed_but_complete": []
+  },
+  "per_url": [
+    {
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "class": "docs",
+      "status": "success",
+      "latency_ms": 10926.95433300105,
+      "schema_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title",
+        "version"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 7,
+      "methods": {
+        "og_manual": 2,
+        "meta_og": 2,
+        "trafilatura": 2,
+        "url_derived": 1
+      },
+      "tactic": "docs",
+      "page_class": "docs",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "static_hint:cache_hit",
+        "etag:\"6ab4ba5b-6343\"",
+        "spa_score:0.0",
+        "canonical:https://docs.python.org/3/library/asyncio.html",
+        "page_class:docs",
+        "tactic:docs",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "asyncio — Asynchronous I/O",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "description",
+          "value": "Hello World!: asyncio is a library to write concurrent code using the async/await syntax. asyncio is used as a foundatio",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "source",
+          "value": "Python documentation",
+          "method": "meta_og",
+          "confidence": 0.93
+        },
+        {
+          "field": "version",
+          "value": "3",
+          "method": "url_derived",
+          "confidence": 0.7
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=docs spa=False spa_score=0.0 jsonld=False fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=https://docs.python.org/3/library/asyncio.html",
+        "structured: +2 fields=['description', 'title'] links=14",
+        "json_ld: +0 fields=[]",
+        "meta_og: +2 fields=['name', 'source']",
+        "trafilatura: +2 fields=['date', 'main_text']",
+        "css: +0 still_missing=['version']",
+        "url_derived: +1 fields=['version']",
+        "resolve: 7 → 7 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "class": "docs",
+      "status": "success",
+      "latency_ms": 9274.109601996315,
+      "schema_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title",
+        "version"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 7,
+      "methods": {
+        "og_manual": 2,
+        "meta_og": 2,
+        "trafilatura": 2,
+        "url_derived": 1
+      },
+      "tactic": "docs",
+      "page_class": "docs",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "static_hint:cache_hit",
+        "spa_score:0.0",
+        "canonical:https://docs.djangoproject.com/en/6.1/topics/db/models/",
+        "page_class:docs",
+        "tactic:docs",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "Models | Django documentation",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "description",
+          "value": "The web framework for perfectionists with deadlines.",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "source",
+          "value": "Django Project",
+          "method": "meta_og",
+          "confidence": 0.93
+        },
+        {
+          "field": "version",
+          "value": "5.0",
+          "method": "url_derived",
+          "confidence": 0.7
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=docs spa=False spa_score=0.0 jsonld=False fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=https://docs.djangoproject.com/en/6.1/topics/db/models/",
+        "structured: +2 fields=['description', 'title'] links=17",
+        "json_ld: +0 fields=[]",
+        "meta_og: +2 fields=['name', 'source']",
+        "trafilatura: +2 fields=['date', 'main_text']",
+        "css: +0 still_missing=['version']",
+        "url_derived: +1 fields=['version']",
+        "resolve: 7 → 7 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "class": "docs",
+      "status": "partial",
+      "latency_ms": 2118.5593510017497,
+      "schema_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 5,
+      "methods": {
+        "meta_og": 1,
+        "trafilatura": 3,
+        "url_derived": 1
+      },
+      "tactic": "docs",
+      "page_class": "docs",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "generator:zensical-0.0.57",
+        "cdn:cloudflare",
+        "embedded:json_script",
+        "spa_score:0.0",
+        "canonical:https://fastapi.tiangolo.com/tutorial/first-steps/",
+        "page_class:docs",
+        "tactic:docs",
+        "missing_fields: ['version']",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "description",
+          "value": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+          "method": "meta_og",
+          "confidence": 0.88
+        },
+        {
+          "field": "title",
+          "value": "First Steps¶",
+          "method": "trafilatura",
+          "confidence": 0.9
+        },
+        {
+          "field": "source",
+          "value": "fastapi.tiangolo.com",
+          "method": "url_derived",
+          "confidence": 0.7
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=docs spa=False spa_score=0.0 jsonld=False fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=https://fastapi.tiangolo.com/tutorial/first-steps/",
+        "structured: +0 fields=[] links=23",
+        "json_ld: +0 fields=[]",
+        "embedded(json_script): +0 fields=[]",
+        "meta_og: +1 fields=['description']",
+        "trafilatura: +3 fields=['date', 'main_text', 'title']",
+        "css: +0 still_missing=['version', 'source']",
+        "url_derived: +1 fields=['source']",
+        "resolve: 5 → 5 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "class": "docs",
+      "status": "partial",
+      "latency_ms": 1710.917584001436,
+      "schema_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 5,
+      "methods": {
+        "meta_og": 1,
+        "trafilatura": 3,
+        "css_selector": 1
+      },
+      "tactic": "docs",
+      "page_class": "generic",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "static_hint:cache_hit",
+        "etag:\"a83839eee59d81c62ac71b24bf6e2e9f\"",
+        "spa_score:0.0",
+        "canonical:https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+        "page_class:generic",
+        "tactic:docs",
+        "missing_fields: ['version']",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "description",
+          "value": "The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and fle",
+          "method": "meta_og",
+          "confidence": 0.88
+        },
+        {
+          "field": "title",
+          "value": "Fetch API",
+          "method": "trafilatura",
+          "confidence": 0.9
+        },
+        {
+          "field": "source",
+          "value": "Web",
+          "method": "css_selector",
+          "confidence": 0.75
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=generic spa=False spa_score=0.0 jsonld=False fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+        "structured: +0 fields=[] links=26",
+        "json_ld: +0 fields=[]",
+        "meta_og: +1 fields=['description']",
+        "trafilatura: +3 fields=['date', 'main_text', 'title']",
+        "css: +0 still_missing=['version', 'source']",
+        "breadcrumbs: +1 fields=['source']",
+        "resolve: 5 → 5 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://docs.docker.com/get-started/overview/",
+      "class": "docs",
+      "status": "partial",
+      "latency_ms": 1561.8114600001718,
+      "schema_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 6,
+      "methods": {
+        "json-ld": 2,
+        "meta_og": 2,
+        "trafilatura": 2
+      },
+      "tactic": "docs",
+      "page_class": "article",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "jsonld_detected",
+        "cdn:cloudfront",
+        "static_hint:cache_hit",
+        "etag:W/\"5880d4fa56ac8784aaca06ed2001fd43\"",
+        "trackers:3",
+        "spa_score:0.0",
+        "canonical:https://docs.docker.com/get-started/docker-overview/",
+        "page_class:article",
+        "tactic:docs",
+        "missing_fields: ['version']",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "What is Docker?",
+          "method": "json-ld",
+          "confidence": 0.96
+        },
+        {
+          "field": "description",
+          "value": "Get an in-depth overview of the Docker platform including what it can be used for, the architecture it employs, and its ",
+          "method": "json-ld",
+          "confidence": 0.96
+        },
+        {
+          "field": "source",
+          "value": "Docker Documentation",
+          "method": "meta_og",
+          "confidence": 0.93
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=article spa=False spa_score=0.0 jsonld=True fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "structured: +2 fields=['description', 'title'] links=9",
+        "json_ld: +0 fields=[]",
+        "meta_og: +2 fields=['name', 'source']",
+        "trafilatura: +2 fields=['date', 'main_text']",
+        "css: +0 still_missing=['version']",
+        "resolve: 6 → 6 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://react.dev/learn/thinking-in-react",
+      "class": "docs",
+      "status": "partial",
+      "latency_ms": 3974.4970079991617,
+      "schema_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 5,
+      "methods": {
+        "og_manual": 2,
+        "meta_og": 1,
+        "trafilatura": 1,
+        "url_derived": 1
+      },
+      "tactic": "docs",
+      "page_class": "docs",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "likely_spa: low confidence in L1 extraction",
+        "cdn:vercel",
+        "frameworks:next.js,react",
+        "embedded:next_data,json_script",
+        "static_hint:cache_hit",
+        "etag:W/\"0a732300dc98454825f5d9ab9509190f\"",
+        "trackers:2",
+        "spa_score:0.75",
+        "canonical:https://react.dev/learn/thinking-in-react",
+        "page_class:docs",
+        "tactic:docs",
+        "missing_fields: ['version']",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "Thinking in React – React",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "description",
+          "value": "The library for web and native user interfaces",
+          "method": "og_manual",
+          "confidence": 0.88
+        },
+        {
+          "field": "source",
+          "value": "react.dev",
+          "method": "url_derived",
+          "confidence": 0.7
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=docs spa=True spa_score=0.75 jsonld=False fw=['next.js', 'react'] blobs=['next_data'] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=https://react.dev/learn/thinking-in-react",
+        "structured: +2 fields=['description', 'title'] links=28",
+        "json_ld: +0 fields=[]",
+        "embedded(next_data,json_script): +0 fields=[]",
+        "meta_og: +1 fields=['name']",
+        "trafilatura: +1 fields=['main_text']",
+        "css: +0 still_missing=['version', 'source']",
+        "url_derived: +1 fields=['source']",
+        "resolve: 5 → 5 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "class": "docs",
+      "status": "partial",
+      "latency_ms": 2933.276586998545,
+      "schema_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 6,
+      "methods": {
+        "microdata": 3,
+        "meta_og": 1,
+        "trafilatura": 2
+      },
+      "tactic": "docs",
+      "page_class": "generic",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "jsonld_detected",
+        "cdn:netlify",
+        "static_hint:cache_hit",
+        "etag:\"2986282e8e22de88c22c64a79442ae4a-ssl-df",
+        "trackers:2",
+        "spa_score:0.0",
+        "page_class:generic",
+        "tactic:docs",
+        "missing_fields: ['version']",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "Overview",
+          "method": "microdata",
+          "confidence": 0.91
+        },
+        {
+          "field": "description",
+          "value": "Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services that facili",
+          "method": "microdata",
+          "confidence": 0.91
+        },
+        {
+          "field": "source",
+          "value": "Kubernetes",
+          "method": "meta_og",
+          "confidence": 0.93
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=generic spa=False spa_score=0.0 jsonld=True fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "structured: +3 fields=['description', 'name', 'title'] links=33",
+        "json_ld: +0 fields=[]",
+        "meta_og: +1 fields=['source']",
+        "trafilatura: +2 fields=['date', 'main_text']",
+        "css: +0 still_missing=['version']",
+        "resolve: 6 → 6 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "class": "docs",
+      "status": "success",
+      "latency_ms": 3631.8221149995225,
+      "schema_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "extracted_fields": [
+        "description",
+        "source",
+        "title",
+        "version"
+      ],
+      "missing_fields": [],
+      "completeness": 1.0,
+      "required_fields": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "task_complete": true,
+      "n_facts": 6,
+      "methods": {
+        "trafilatura": 3,
+        "docs_lead": 1,
+        "url_derived": 2
+      },
+      "tactic": "docs",
+      "page_class": "docs",
+      "needs_browser": false,
+      "failure_reason": null,
+      "warnings": [
+        "cdn:cloudflare",
+        "spa_score:0.0",
+        "canonical:http://docs.sqlalchemy.org/en/latest/orm/quickstart.html",
+        "page_class:docs",
+        "tactic:docs",
+        "route:L1_http:mode=http"
+      ],
+      "facts": [
+        {
+          "field": "title",
+          "value": "ORM Quick Start",
+          "method": "trafilatura",
+          "confidence": 0.9
+        },
+        {
+          "field": "description",
+          "value": "For new users who want to quickly see what basic ORM use looks like, here’s an abbreviated form of the mappings and exam",
+          "method": "docs_lead",
+          "confidence": 0.68
+        },
+        {
+          "field": "source",
+          "value": "docs.sqlalchemy.org",
+          "method": "url_derived",
+          "confidence": 0.7
+        },
+        {
+          "field": "version",
+          "value": "20",
+          "method": "url_derived",
+          "confidence": 0.7
+        }
+      ],
+      "debug_trace": [
+        "tactic=docs (url+dom) page_class=docs spa=False spa_score=0.0 jsonld=False fw=[] blobs=[] methods=['meta_og', 'json_ld', 'css', 'trafilatura', 'url_derived']",
+        "canonical=http://docs.sqlalchemy.org/en/latest/orm/quickstart.html",
+        "structured: +0 fields=[] links=22",
+        "json_ld: +0 fields=[]",
+        "meta_og: +0 fields=[]",
+        "trafilatura: +3 fields=['date', 'main_text', 'title']",
+        "docs_lead: +1",
+        "css: +0 still_missing=['version', 'source']",
+        "url_derived: +2 fields=['source', 'version']",
+        "resolve: 6 → 6 facts, conflicts=0"
+      ]
+    },
+    {
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "class": "product",
+      "status": "failed",
+      "latency_ms": 489.9127610042342,
+      "schema_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "extracted_fields": [],
+      "missing_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "completeness": 0.0,
+      "required_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "task_complete": false,
+      "n_facts": 0,
+      "methods": {},
+      "tactic": null,
+      "page_class": null,
+      "needs_browser": false,
+      "failure_reason": "no_html:http_error",
+      "warnings": [
+        "Client error '403 Forbidden' for url 'https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
+      "facts": [],
+      "debug_trace": []
+    },
+    {
+      "url": "https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/",
+      "class": "product",
+      "status": "failed",
+      "latency_ms": 266.17118300055154,
+      "schema_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "extracted_fields": [],
+      "missing_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "completeness": 0.0,
+      "required_fields": [
+        "name",
+        "price",
+        "currency",
+        "brand",
+        "availability"
+      ],
+      "task_complete": false,
+      "n_facts": 0,
+      "methods": {},
+      "tactic": null,
+      "page_class": null,
+      "needs_browser": false,
+      "failure_reason": "no_html:http_error",
+      "warnings": [
+        "Client error '403 Forbidden' for url 'https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
+      "facts": [],
+      "debug_trace": []
+    }
+  ]
+}

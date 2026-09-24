@@ -1,0 +1,1651 @@
+{
+  "summary": {
+    "n": 60,
+    "tp": 144,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1.0,
+    "recall": 0.9863013698630136,
+    "f1": 0.993103448275862
+  },
+  "results": [
+    {
+      "id": "gt_docs_py_asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "asyncio — Asynchronous I/O"
+        },
+        "version": {
+          "status": "correct",
+          "got": "3"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Python documentation"
+        }
+      },
+      "extracted": {
+        "title": "asyncio — Asynchronous I/O",
+        "version": "3",
+        "source": "Python documentation"
+      }
+    },
+    {
+      "id": "gt_docs_django",
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Models | Django documentation"
+        },
+        "version": {
+          "status": "correct",
+          "got": "5.0"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Django Project"
+        }
+      },
+      "extracted": {
+        "title": "Models | Django documentation",
+        "version": "5.0",
+        "source": "Django Project"
+      }
+    },
+    {
+      "id": "gt_docs_fastapi",
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "First Steps¶"
+        },
+        "source": {
+          "status": "correct",
+          "got": "fastapi.tiangolo.com"
+        }
+      },
+      "extracted": {
+        "title": "First Steps¶",
+        "source": "fastapi.tiangolo.com"
+      }
+    },
+    {
+      "id": "gt_docs_mdn_fetch",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Fetch API"
+        },
+        "description": {
+          "status": "correct",
+          "got": "The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for XMLHttpRequest."
+        }
+      },
+      "extracted": {
+        "title": "Fetch API",
+        "description": "The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for XMLHttpRequest."
+      }
+    },
+    {
+      "id": "gt_docs_docker",
+      "url": "https://docs.docker.com/get-started/overview/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "What is Docker?"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Docker Documentation"
+        }
+      },
+      "extracted": {
+        "title": "What is Docker?",
+        "source": "Docker Documentation"
+      }
+    },
+    {
+      "id": "gt_docs_react",
+      "url": "https://react.dev/learn/thinking-in-react",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Thinking in React – React"
+        },
+        "description": {
+          "status": "correct",
+          "got": "The library for web and native user interfaces"
+        }
+      },
+      "extracted": {
+        "title": "Thinking in React – React",
+        "description": "The library for web and native user interfaces"
+      }
+    },
+    {
+      "id": "gt_docs_k8s",
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Overview"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Kubernetes"
+        }
+      },
+      "extracted": {
+        "title": "Overview",
+        "source": "Kubernetes"
+      }
+    },
+    {
+      "id": "gt_docs_sqla",
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "ORM Quick Start"
+        },
+        "version": {
+          "status": "correct",
+          "got": "20"
+        },
+        "source": {
+          "status": "correct",
+          "got": "docs.sqlalchemy.org"
+        }
+      },
+      "extracted": {
+        "title": "ORM Quick Start",
+        "version": "20",
+        "source": "docs.sqlalchemy.org"
+      }
+    },
+    {
+      "id": "gt_docs_pydantic",
+      "url": "https://docs.pydantic.dev/latest/",
+      "class": "docs",
+      "status": "success",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Pydantic Validation"
+        }
+      },
+      "extracted": {
+        "title": "Pydantic Validation"
+      }
+    },
+    {
+      "id": "gt_prod_ikea_kallax",
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "class": "product",
+      "status": "success",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "KALLAX Shelf unit - white 30 1/8x57 5/8 \""
+        },
+        "brand": {
+          "status": "correct",
+          "got": "IKEA"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 79.99
+        }
+      },
+      "extracted": {
+        "name": "KALLAX Shelf unit - white 30 1/8x57 5/8 \"",
+        "brand": "IKEA",
+        "currency": "USD",
+        "price": 79.99
+      }
+    },
+    {
+      "id": "gt_prod_ikea_malm",
+      "url": "https://www.ikea.com/us/en/p/malm-bed-frame-high-black-brown-luroey-s69009475/",
+      "class": "product",
+      "status": "success",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "MALM Bedroom Series"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "IKEA"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 399
+        }
+      },
+      "extracted": {
+        "name": "MALM Bedroom Series",
+        "brand": "IKEA",
+        "currency": "USD",
+        "price": 399
+      }
+    },
+    {
+      "id": "gt_prod_ikea_billy",
+      "url": "https://www.ikea.com/us/en/p/billy-bookcase-white-00263850/",
+      "class": "product",
+      "status": "success",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "BILLY Bookcases & Bookshelves"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "IKEA"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 69
+        }
+      },
+      "extracted": {
+        "name": "BILLY Bookcases & Bookshelves",
+        "brand": "IKEA",
+        "currency": "USD",
+        "price": 69
+      }
+    },
+    {
+      "id": "gt_prod_nike_af1",
+      "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr/CW2288-111",
+      "class": "product",
+      "status": "success",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "Nike Air Force 1 '07 Men's Shoes"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "Nike"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 115.0
+        }
+      },
+      "extracted": {
+        "name": "Nike Air Force 1 '07 Men's Shoes",
+        "brand": "Nike",
+        "currency": "USD",
+        "price": 115.0
+      }
+    },
+    {
+      "id": "gt_prod_dell_xps",
+      "url": "https://www.dell.com/en-us/shop/dell-laptops/xps-13-laptop/spd/xps-13-9340-laptop",
+      "class": "product",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "XPS 9340 Laptop | Dell USA"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "Dell"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        }
+      },
+      "extracted": {
+        "name": "XPS 9340 Laptop | Dell USA",
+        "brand": "Dell",
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "gt_prod_samsung_s24",
+      "url": "https://www.samsung.com/us/smartphones/galaxy-s24-ultra/",
+      "class": "product",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "Samsung Galaxy S24 Ultra | Features & Highlights | Samsung US"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "Samsung"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        }
+      },
+      "extracted": {
+        "name": "Samsung Galaxy S24 Ultra | Features & Highlights | Samsung US",
+        "brand": "Samsung",
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "gt_prod_steam_cs2",
+      "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
+      "class": "product",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "Counter-Strike 2"
+        },
+        "brand": {
+          "status": "correct",
+          "got": "Steam"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        }
+      },
+      "extracted": {
+        "name": "Counter-Strike 2",
+        "brand": "Steam",
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "gt_prod_amazon",
+      "url": "https://www.amazon.com/dp/B0DGHMNQ5Z",
+      "class": "product",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "Apple AirPods 4 Wireless Earbuds, Bluetooth Headphones, Personalized Spatial Audio, Sweat and Water Resistant, USB-C Charging Case, H2 Chip, Up to 30 Hours of Battery Life, Effortless Setup for iPhone"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 99.0
+        }
+      },
+      "extracted": {
+        "name": "Apple AirPods 4 Wireless Earbuds, Bluetooth Headphones, Personalized Spatial Audio, Sweat and Water Resistant, USB-C Charging Case, H2 Chip, Up to 30 Hours of Battery Life, Effortless Setup for iPhone",
+        "currency": "USD",
+        "price": 99.0
+      }
+    },
+    {
+      "id": "gt_art_habr",
+      "url": "https://habr.com/ru/articles/778312/",
+      "class": "article",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Утверждена «Стратегия развития отрасли связи в РФ на 2024—2035 годы»"
+        },
+        "author": {
+          "status": "correct",
+          "got": "denis-19 4 дек 2023 в 10:10"
+        },
+        "publish_date": {
+          "status": "correct",
+          "got": "2023-12-04T13:10:54+03:00"
+        }
+      },
+      "extracted": {
+        "title": "Утверждена «Стратегия развития отрасли связи в РФ на 2024—2035 годы»",
+        "author": "denis-19 4 дек 2023 в 10:10",
+        "publish_date": "2023-12-04T13:10:54+03:00"
+      }
+    },
+    {
+      "id": "gt_art_css_tricks",
+      "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "A Complete Guide to CSS Flexbox | CSS-Tricks"
+        },
+        "description": {
+          "status": "correct",
+          "got": "A learning community for front-end design and development"
+        }
+      },
+      "extracted": {
+        "title": "A Complete Guide to CSS Flexbox | CSS-Tricks",
+        "description": "A learning community for front-end design and development"
+      }
+    },
+    {
+      "id": "gt_art_webdev",
+      "url": "https://web.dev/articles/vitals",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Web Vitals | Articles | web.dev"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Essential metrics for a healthy site"
+        }
+      },
+      "extracted": {
+        "title": "Web Vitals | Articles | web.dev",
+        "description": "Essential metrics for a healthy site"
+      }
+    },
+    {
+      "id": "gt_art_nature",
+      "url": "https://www.nature.com/articles/d41586-024-00168-8",
+      "class": "article",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Computers make mistakes and AI will make things worse — the law must recognize that"
+        },
+        "publish_date": {
+          "status": "correct",
+          "got": "2024-01-23T00:00:00Z"
+        },
+        "description": {
+          "status": "correct",
+          "got": "A tragic scandal at the UK Post Office highlights the need for legal change, especially as organizations embrace artificial intelligence to enhance decision-making."
+        }
+      },
+      "extracted": {
+        "title": "Computers make mistakes and AI will make things worse — the law must recognize that",
+        "publish_date": "2024-01-23T00:00:00Z",
+        "description": "A tragic scandal at the UK Post Office highlights the need for legal change, especially as organizations embrace artificial intelligence to enhance decision-making."
+      }
+    },
+    {
+      "id": "gt_art_cf",
+      "url": "https://blog.cloudflare.com/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Cloudflare Blog"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Technical deep dives, product updates, and insights from the teams that are helping to build a better Internet."
+        }
+      },
+      "extracted": {
+        "title": "Cloudflare Blog",
+        "description": "Technical deep dives, product updates, and insights from the teams that are helping to build a better Internet."
+      }
+    },
+    {
+      "id": "gt_art_gh",
+      "url": "https://github.blog/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Home - The GitHub Blog"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Updates, ideas, and inspiration from GitHub to help developers build and design software."
+        }
+      },
+      "extracted": {
+        "title": "Home - The GitHub Blog",
+        "description": "Updates, ideas, and inspiration from GitHub to help developers build and design software."
+      }
+    },
+    {
+      "id": "gt_art_arxiv",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "class": "article",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Attention Is All You Need"
+        },
+        "author": {
+          "status": "correct",
+          "got": "Vaswani; Ashish; Shazeer; Noam; Parmar; Niki; Uszkoreit; Jakob; Jones; Llion; Gomez; Aidan N; Kaiser; Lukasz; Polosukhin; Illia"
+        },
+        "publish_date": {
+          "status": "correct",
+          "got": "2017-06-12"
+        }
+      },
+      "extracted": {
+        "title": "Attention Is All You Need",
+        "author": "Vaswani; Ashish; Shazeer; Noam; Parmar; Niki; Uszkoreit; Jakob; Jones; Llion; Gomez; Aidan N; Kaiser; Lukasz; Polosukhin; Illia",
+        "publish_date": "2017-06-12"
+      }
+    },
+    {
+      "id": "gt_art_k8s_v132",
+      "url": "https://kubernetes.io/blog/2024/12/11/kubernetes-v1-32-release/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Kubernetes v1.32: Penelope"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Editors: Matteo Bianchi, Edith Puclla, William Rizzo, Ryota Sawada, Rashan Smith Announcing the release of Kubernetes v1.32: Penelope! In line with previous releases, the release of Kubernetes v1.32 introduces new stable, beta, and alpha features. The consistent delivery of high-quality releases underscores the strength of our development cycle and the vibrant support from our community. This release consists of 44 enhancements in total. Of those enhancements, 13 have graduated to Stable, 12 are entering Beta, and 19 have entered in Alpha."
+        }
+      },
+      "extracted": {
+        "title": "Kubernetes v1.32: Penelope",
+        "description": "Editors: Matteo Bianchi, Edith Puclla, William Rizzo, Ryota Sawada, Rashan Smith Announcing the release of Kubernetes v1.32: Penelope! In line with previous releases, the release of Kubernetes v1.32 introduces new stable, beta, and alpha features. The consistent delivery of high-quality releases underscores the strength of our development cycle and the vibrant support from our community. This release consists of 44 enhancements in total. Of those enhancements, 13 have graduated to Stable, 12 are entering Beta, and 19 have entered in Alpha."
+      }
+    },
+    {
+      "id": "gt_ref_wiki_ai",
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Artificial intelligence - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. It is a field of research in engineering, mathematics, and computer science that develops and studies methods and software that enable machines to perceive their environment and use learning and intelligence to take actions that maximise their chances of achieving defined goals.[1]"
+        }
+      },
+      "extracted": {
+        "title": "Artificial intelligence - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. It is a field of research in engineering, mathematics, and computer science that develops and studies methods and software that enable machines to perceive their environment and use learning and intelligence to take actions that maximise their chances of achieving defined goals.[1]"
+      }
+    },
+    {
+      "id": "gt_ref_wiki_py",
+      "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Python (programming language) - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Python is a high-level, general-purpose programming language that emphasizes code readability, simplicity, and ease-of-writing with the use of significant indentation,[38] an extensive (\"batteries-included\") standard library, and garbage collection. Python supports multiple programming paradigms but with an emphasis on object-oriented programming and dynamic typing."
+        }
+      },
+      "extracted": {
+        "title": "Python (programming language) - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "Python is a high-level, general-purpose programming language that emphasizes code readability, simplicity, and ease-of-writing with the use of significant indentation,[38] an extensive (\"batteries-included\") standard library, and garbage collection. Python supports multiple programming paradigms but with an emphasis on object-oriented programming and dynamic typing."
+      }
+    },
+    {
+      "id": "gt_ref_wiki_climate",
+      "url": "https://en.wikipedia.org/wiki/Climate_change",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Climate change - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Present-day climate change includes both global warming—the ongoing increase in global average temperature—and its wider effects on Earth's climate system. In a broader sense, climate change also includes previous long-term changes to Earth's climate. The modern-day rise in global temperatures is driven by human activities, especially fossil fuel (coal, oil and natural gas) burning since the Industrial Revolution.[4][5] Fossil fuel use, deforestation, and some agricultural and industrial practic"
+        }
+      },
+      "extracted": {
+        "title": "Climate change - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "Present-day climate change includes both global warming—the ongoing increase in global average temperature—and its wider effects on Earth's climate system. In a broader sense, climate change also includes previous long-term changes to Earth's climate. The modern-day rise in global temperatures is driven by human activities, especially fossil fuel (coal, oil and natural gas) burning since the Industrial Revolution.[4][5] Fossil fuel use, deforestation, and some agricultural and industrial practic"
+      }
+    },
+    {
+      "id": "gt_ref_wiki_france",
+      "url": "https://en.wikipedia.org/wiki/France",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "France - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "France,[i] officially the French Republic,[j] is a country primarily located in Western Europe.[k] Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many islands in Oceania and the Indian Ocean. Metropolitan France shares borders with Belgium and Luxembourg to the north, Germany to the northeast, Switzerland to the east, Italy and Monaco to the southeast, Andorra and Spain to the south, and a "
+        }
+      },
+      "extracted": {
+        "title": "France - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "France,[i] officially the French Republic,[j] is a country primarily located in Western Europe.[k] Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many islands in Oceania and the Indian Ocean. Metropolitan France shares borders with Belgium and Luxembourg to the north, Germany to the northeast, Switzerland to the east, Italy and Monaco to the southeast, Andorra and Spain to the south, and a "
+      }
+    },
+    {
+      "id": "gt_ref_worldometers",
+      "url": "https://www.worldometers.info/world-population/",
+      "class": "reference",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "World Population Clock: 8.3 Billion People (LIVE, 2026) - Worldometer"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Worldometer"
+        }
+      },
+      "extracted": {
+        "title": "World Population Clock: 8.3 Billion People (LIVE, 2026) - Worldometer",
+        "source": "Worldometer"
+      }
+    },
+    {
+      "id": "gt_ref_owid",
+      "url": "https://ourworldindata.org/grapher/life-expectancy",
+      "class": "reference",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Life expectancy"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Our World in Data"
+        },
+        "description": {
+          "status": "correct",
+          "got": "An interactive visualization from Our World in Data."
+        }
+      },
+      "extracted": {
+        "title": "Life expectancy",
+        "source": "Our World in Data",
+        "description": "An interactive visualization from Our World in Data."
+      }
+    },
+    {
+      "id": "gt_ref_cia",
+      "url": "https://www.cia.gov/the-world-factbook/countries/united-states/",
+      "class": "reference",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Spotlighting The World Factbook as We Bid a Fond Farewell"
+        },
+        "source": {
+          "status": "correct",
+          "got": "cia.gov"
+        }
+      },
+      "extracted": {
+        "title": "Spotlighting The World Factbook as We Bid a Fond Farewell",
+        "source": "cia.gov"
+      }
+    },
+    {
+      "id": "gt_ref_worldbank",
+      "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+      "class": "reference",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "World Bank Open Data"
+        },
+        "source": {
+          "status": "correct",
+          "got": "World Bank Open Data"
+        }
+      },
+      "extracted": {
+        "title": "World Bank Open Data",
+        "source": "World Bank Open Data"
+      }
+    },
+    {
+      "id": "gt_ref_numbeo",
+      "url": "https://www.numbeo.com/cost-of-living/",
+      "class": "reference",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Cost of Living"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Cost of Living"
+        }
+      },
+      "extracted": {
+        "title": "Cost of Living",
+        "source": "Cost of Living"
+      }
+    },
+    {
+      "id": "gt_ref_who",
+      "url": "https://www.who.int/health-topics/coronavirus",
+      "class": "reference",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Coronavirus"
+        },
+        "source": {
+          "status": "correct",
+          "got": "who.int"
+        }
+      },
+      "extracted": {
+        "title": "Coronavirus",
+        "source": "who.int"
+      }
+    },
+    {
+      "id": "gt_spa_notion",
+      "url": "https://www.notion.so/product",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "The AI workspace that works for you. | Notion"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster."
+        }
+      },
+      "extracted": {
+        "title": "The AI workspace that works for you. | Notion",
+        "description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster."
+      }
+    },
+    {
+      "id": "gt_spa_figma",
+      "url": "https://www.figma.com/pricing/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Plans & Pricing | Figma"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Learn about Figma pricing plans. Explore Figma products, compare key features, and read through FAQs to choose the right plan and seats for your team."
+        }
+      },
+      "extracted": {
+        "title": "Plans & Pricing | Figma",
+        "description": "Learn about Figma pricing plans. Explore Figma products, compare key features, and read through FAQs to choose the right plan and seats for your team."
+      }
+    },
+    {
+      "id": "gt_spa_trello",
+      "url": "https://trello.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Capture, organize, and tackle your to-dos from anywhere"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Make the impossible, possible with Trello. The ultimate tool to boost your productivity. Escape the clutter and chaos—stay efficient with Inbox, Boards, and Planner from anywhere, even on mobile."
+        }
+      },
+      "extracted": {
+        "title": "Capture, organize, and tackle your to-dos from anywhere",
+        "description": "Make the impossible, possible with Trello. The ultimate tool to boost your productivity. Escape the clutter and chaos—stay efficient with Inbox, Boards, and Planner from anywhere, even on mobile."
+      }
+    },
+    {
+      "id": "gt_spa_dropbox",
+      "url": "https://www.dropbox.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Dropbox"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Dropbox is a home for all of your work. You can store and share files, collaborate on projects and bring your best ideas to life – whether you’re working alone or as part of a team."
+        }
+      },
+      "extracted": {
+        "title": "Dropbox",
+        "description": "Dropbox is a home for all of your work. You can store and share files, collaborate on projects and bring your best ideas to life – whether you’re working alone or as part of a team."
+      }
+    },
+    {
+      "id": "gt_spa_vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "GitHub - microsoft/vscode: Visual Studio Code"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Visual Studio Code. Contribute to microsoft/vscode development by creating an account on GitHub."
+        }
+      },
+      "extracted": {
+        "title": "GitHub - microsoft/vscode: Visual Studio Code",
+        "description": "Visual Studio Code. Contribute to microsoft/vscode development by creating an account on GitHub."
+      }
+    },
+    {
+      "id": "gt_spa_spotify",
+      "url": "https://www.spotify.com/us/download/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Music for everyone."
+        },
+        "description": {
+          "status": "correct",
+          "got": "Spotify is all the music you’ll ever need."
+        }
+      },
+      "extracted": {
+        "title": "Music for everyone.",
+        "description": "Spotify is all the music you’ll ever need."
+      }
+    },
+    {
+      "id": "gt_spa_hn",
+      "url": "https://news.ycombinator.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Hacker News"
+        }
+      },
+      "extracted": {
+        "title": "Hacker News"
+      }
+    },
+    {
+      "id": "gt_spa_airbnb",
+      "url": "https://www.airbnb.com/s/Paris/homes",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Airbnb | Paris - Vacation Rentals & Places to Stay - Ile-de-France"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Rent from people in Paris, France from $20/night. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb."
+        }
+      },
+      "extracted": {
+        "title": "Airbnb | Paris - Vacation Rentals & Places to Stay - Ile-de-France",
+        "description": "Rent from people in Paris, France from $20/night. Find unique places to stay with local hosts in 191 countries. Belong anywhere with Airbnb."
+      }
+    },
+    {
+      "id": "gt_spa_vercel",
+      "url": "https://vercel.com/",
+      "class": "spa",
+      "status": "failed",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fields": {
+        "title": {
+          "status": "missing",
+          "expected": {
+            "contains": [
+              "Vercel"
+            ]
+          },
+          "got": null
+        },
+        "description": {
+          "status": "missing",
+          "expected": {
+            "min_len": 10
+          },
+          "got": null
+        }
+      },
+      "extracted": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gt_docs_py_tutorial",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "The Python Tutorial"
+        },
+        "version": {
+          "status": "correct",
+          "got": "3"
+        },
+        "source": {
+          "status": "correct",
+          "got": "Python documentation"
+        }
+      },
+      "extracted": {
+        "title": "The Python Tutorial",
+        "version": "3",
+        "source": "Python documentation"
+      }
+    },
+    {
+      "id": "gt_docs_flask",
+      "url": "https://flask.palletsprojects.com/en/3.0.x/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Welcome to Flask¶"
+        },
+        "source": {
+          "status": "correct",
+          "got": "flask.palletsprojects.com"
+        }
+      },
+      "extracted": {
+        "title": "Welcome to Flask¶",
+        "source": "flask.palletsprojects.com"
+      }
+    },
+    {
+      "id": "gt_docs_pytest",
+      "url": "https://docs.pytest.org/en/stable/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "pytest: helps you write better programs¶"
+        },
+        "source": {
+          "status": "correct",
+          "got": "docs.pytest.org"
+        }
+      },
+      "extracted": {
+        "title": "pytest: helps you write better programs¶",
+        "source": "docs.pytest.org"
+      }
+    },
+    {
+      "id": "gt_docs_numpy",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "NumPy: the absolute basics for beginners#"
+        },
+        "source": {
+          "status": "correct",
+          "got": "numpy.org"
+        }
+      },
+      "extracted": {
+        "title": "NumPy: the absolute basics for beginners#",
+        "source": "numpy.org"
+      }
+    },
+    {
+      "id": "gt_prod_ikea_lack",
+      "url": "https://www.ikea.com/us/en/p/lack-side-table-white-30449908/",
+      "class": "product",
+      "status": "success",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "LACK Side table - white 21 5/8x21 5/8 \""
+        },
+        "brand": {
+          "status": "correct",
+          "got": "IKEA"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        },
+        "price": {
+          "status": "correct",
+          "got": 16.99
+        }
+      },
+      "extracted": {
+        "name": "LACK Side table - white 21 5/8x21 5/8 \"",
+        "brand": "IKEA",
+        "currency": "USD",
+        "price": 16.99
+      }
+    },
+    {
+      "id": "gt_prod_steam_dota",
+      "url": "https://store.steampowered.com/app/570/Dota_2/",
+      "class": "product",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "name": {
+          "status": "correct",
+          "got": "Dota 2"
+        },
+        "currency": {
+          "status": "correct",
+          "got": "USD"
+        }
+      },
+      "extracted": {
+        "name": "Dota 2",
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "gt_art_google_blog",
+      "url": "https://blog.google/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "News from Google"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Get the latest news and stories about Google products, technology and innovation on News from Google, Google&#x27;s official blog."
+        }
+      },
+      "extracted": {
+        "title": "News from Google",
+        "description": "Get the latest news and stories about Google products, technology and innovation on News from Google, Google&#x27;s official blog."
+      }
+    },
+    {
+      "id": "gt_art_bbc",
+      "url": "https://www.bbc.com/news",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "BBC News - Breaking news, video and the latest top stories from the U.S. and around the world"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Visit BBC News for the latest news, breaking news, video, audio and analysis. BBC News provides trusted World, U.S. and U.K. news as well as local and regional perspectives. Also entertainment, climate, business, science, technology and health news."
+        }
+      },
+      "extracted": {
+        "title": "BBC News - Breaking news, video and the latest top stories from the U.S. and around the world",
+        "description": "Visit BBC News for the latest news, breaking news, video, audio and analysis. BBC News provides trusted World, U.S. and U.K. news as well as local and regional perspectives. Also entertainment, climate, business, science, technology and health news."
+      }
+    },
+    {
+      "id": "gt_art_techcrunch",
+      "url": "https://techcrunch.com/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "TechCrunch | Startup and Technology News"
+        },
+        "description": {
+          "status": "correct",
+          "got": "TechCrunch | Reporting on the business of technology, startups, venture capital funding, and Silicon Valley"
+        }
+      },
+      "extracted": {
+        "title": "TechCrunch | Startup and Technology News",
+        "description": "TechCrunch | Reporting on the business of technology, startups, venture capital funding, and Silicon Valley"
+      }
+    },
+    {
+      "id": "gt_art_verge",
+      "url": "https://www.theverge.com/",
+      "class": "article",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "The Verge"
+        },
+        "description": {
+          "status": "correct",
+          "got": "The Verge is a technology and science news website founded in 2011. It offers its readers breaking tech news, tech reviews, award-winning features and investigations through articles, videos, podcasts, and newsletters."
+        }
+      },
+      "extracted": {
+        "title": "The Verge",
+        "description": "The Verge is a technology and science news website founded in 2011. It offers its readers breaking tech news, tech reviews, award-winning features and investigations through articles, videos, podcasts, and newsletters."
+      }
+    },
+    {
+      "id": "gt_ref_wiki_ml",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Machine learning - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed.[1] Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+        }
+      },
+      "extracted": {
+        "title": "Machine learning - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed.[1] Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+      }
+    },
+    {
+      "id": "gt_ref_wiki_http",
+      "url": "https://en.wikipedia.org/wiki/HTTP",
+      "class": "reference",
+      "status": "failed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "HTTP - Wikipedia"
+        },
+        "source": {
+          "status": "correct",
+          "got": "en.wikipedia.org"
+        },
+        "description": {
+          "status": "correct",
+          "got": "HTTP (Hypertext Transfer Protocol) is an application layer protocol in the Internet protocol suite for distributed, collaborative, hypermedia information systems.[1] HTTP is the foundation of data communication for the World Wide Web, where hypertext documents include hyperlinks to other resources that the user can easily access, for example by a mouse click or by tapping the screen in a web browser."
+        }
+      },
+      "extracted": {
+        "title": "HTTP - Wikipedia",
+        "source": "en.wikipedia.org",
+        "description": "HTTP (Hypertext Transfer Protocol) is an application layer protocol in the Internet protocol suite for distributed, collaborative, hypermedia information systems.[1] HTTP is the foundation of data communication for the World Wide Web, where hypertext documents include hyperlinks to other resources that the user can easily access, for example by a mouse click or by tapping the screen in a web browser."
+      }
+    },
+    {
+      "id": "gt_spa_stripe",
+      "url": "https://stripe.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Stripe powers online and in-person payment processing and financial solutions for businesses of all sizes."
+        }
+      },
+      "extracted": {
+        "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+        "description": "Stripe powers online and in-person payment processing and financial solutions for businesses of all sizes."
+      }
+    },
+    {
+      "id": "gt_spa_shopify",
+      "url": "https://www.shopify.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business."
+        }
+      },
+      "extracted": {
+        "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+        "description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business."
+      }
+    },
+    {
+      "id": "gt_spa_linear",
+      "url": "https://linear.app/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Linear – The system for product development"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Purpose-built for planning and building products with AI agents."
+        }
+      },
+      "extracted": {
+        "title": "Linear – The system for product development",
+        "description": "Purpose-built for planning and building products with AI agents."
+      }
+    },
+    {
+      "id": "gt_spa_slack",
+      "url": "https://slack.com/",
+      "class": "spa",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fields": {
+        "title": {
+          "status": "correct",
+          "got": "Slack | AI Work Platform & Productivity Tools"
+        },
+        "description": {
+          "status": "correct",
+          "got": "Boost productivity and save time with Slack‌ — ‌the AI work platform for managing projects, automating workflows, and connecting teams securely. Start working smarter today."
+        }
+      },
+      "extracted": {
+        "title": "Slack | AI Work Platform & Productivity Tools",
+        "description": "Boost productivity and save time with Slack‌ — ‌the AI work platform for managing projects, automating workflows, and connecting teams securely. Start working smarter today."
+      }
+    }
+  ]
+}
