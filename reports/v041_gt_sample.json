@@ -1,0 +1,574 @@
+{
+  "summary": {
+    "n": 10,
+    "tp": 20,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1": 0.9090909090909091,
+    "by_kind": {
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "soft": {
+        "tp": 17,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1": 0.9714285714285714
+      },
+      "unknown": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "soft_share_of_matches": 0.85,
+    "extra_fields_returned": 30,
+    "items_with_extra_fields": 9,
+    "effective_fp_including_extras": 30,
+    "effective_precision": 0.4
+  },
+  "results": [
+    {
+      "id": "gt_docs_py_asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          1,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "description",
+        "main_text",
+        "name"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "asyncio — Asynchronous I/O"
+        },
+        "version": {
+          "status": "correct",
+          "kind": "strict",
+          "got": "3"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Python documentation"
+        }
+      },
+      "extracted": {
+        "title": "asyncio — Asynchronous I/O",
+        "version": "3",
+        "source": "Python documentation"
+      }
+    },
+    {
+      "id": "gt_docs_django",
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          1,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "description",
+        "main_text",
+        "name"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Models | Django documentation"
+        },
+        "version": {
+          "status": "correct",
+          "kind": "strict",
+          "got": "5.0"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Django Project"
+        }
+      },
+      "extracted": {
+        "title": "Models | Django documentation",
+        "version": "5.0",
+        "source": "Django Project"
+      }
+    },
+    {
+      "id": "gt_docs_fastapi",
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "description",
+        "main_text"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "First Steps¶"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "fastapi.tiangolo.com"
+        }
+      },
+      "extracted": {
+        "title": "First Steps¶",
+        "source": "fastapi.tiangolo.com"
+      }
+    },
+    {
+      "id": "gt_docs_mdn_fetch",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "main_text"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Fetch API"
+        },
+        "description": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for XMLHttpRequest."
+        }
+      },
+      "extracted": {
+        "title": "Fetch API",
+        "description": "The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for XMLHttpRequest."
+      }
+    },
+    {
+      "id": "gt_docs_docker",
+      "url": "https://docs.docker.com/get-started/overview/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "description",
+        "main_text",
+        "name"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "What is Docker?"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Docker Documentation"
+        }
+      },
+      "extracted": {
+        "title": "What is Docker?",
+        "source": "Docker Documentation"
+      }
+    },
+    {
+      "id": "gt_docs_react",
+      "url": "https://react.dev/learn/thinking-in-react",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "main_text",
+        "name"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Thinking in React – React"
+        },
+        "description": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "The library for web and native user interfaces"
+        }
+      },
+      "extracted": {
+        "title": "Thinking in React – React",
+        "description": "The library for web and native user interfaces"
+      }
+    },
+    {
+      "id": "gt_docs_k8s",
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "class": "docs",
+      "status": "success",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "description",
+        "main_text",
+        "name"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Overview"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Kubernetes"
+        }
+      },
+      "extracted": {
+        "title": "Overview",
+        "source": "Kubernetes"
+      }
+    },
+    {
+      "id": "gt_docs_sqla",
+      "url": "https://docs.sqlalchemy.org/en/20/orm/quickstart.html",
+      "class": "docs",
+      "status": "success",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          1,
+          0,
+          0
+        ],
+        "soft": [
+          2,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "main_text"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "ORM Quick Start"
+        },
+        "version": {
+          "status": "correct",
+          "kind": "strict",
+          "got": "20"
+        },
+        "source": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "docs.sqlalchemy.org"
+        }
+      },
+      "extracted": {
+        "title": "ORM Quick Start",
+        "version": "20",
+        "source": "docs.sqlalchemy.org"
+      }
+    },
+    {
+      "id": "gt_docs_pydantic",
+      "url": "https://docs.pydantic.dev/latest/",
+      "class": "docs",
+      "status": "success",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          0
+        ],
+        "soft": [
+          1,
+          0,
+          0
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [
+        "date",
+        "main_text",
+        "name",
+        "source",
+        "version"
+      ],
+      "fields": {
+        "title": {
+          "status": "correct",
+          "kind": "soft",
+          "got": "Pydantic Validation"
+        }
+      },
+      "extracted": {
+        "title": "Pydantic Validation"
+      }
+    },
+    {
+      "id": "gt_prod_ikea_kallax",
+      "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/",
+      "class": "product",
+      "status": "failed",
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "by_kind": {
+        "strict": [
+          0,
+          0,
+          3
+        ],
+        "soft": [
+          0,
+          0,
+          1
+        ],
+        "unknown": [
+          0,
+          0,
+          0
+        ]
+      },
+      "extra_fields": [],
+      "fields": {
+        "name": {
+          "status": "missing",
+          "kind": "soft",
+          "expected": {
+            "contains": [
+              "KALLAX"
+            ]
+          },
+          "got": null
+        },
+        "brand": {
+          "status": "missing",
+          "kind": "strict",
+          "expected": {
+            "equals": "IKEA"
+          },
+          "got": null
+        },
+        "currency": {
+          "status": "missing",
+          "kind": "strict",
+          "expected": {
+            "equals": "USD"
+          },
+          "got": null
+        },
+        "price": {
+          "status": "missing",
+          "kind": "strict",
+          "expected": {
+            "range": [
+              20,
+              200
+            ]
+          },
+          "got": null
+        }
+      },
+      "extracted": {
+        "name": null,
+        "brand": null,
+        "currency": null,
+        "price": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+httpx>=0.27
+pydantic>=2.0
+selectolax>=0.3.21
+trafilatura>=1.8
+extruct>=0.16
+duckdb>=0.10
+lxml>=5.0
+python-dateutil>=2.9
+pytest>=8.0

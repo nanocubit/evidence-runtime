@@ -1,0 +1,15 @@
+target-version = "py311"
+line-length = 120
+
+[lint]
+# CI-green set: correctness first. Style (I) can be tightened later.
+select = ["E", "F", "W"]
+ignore = [
+  "E501",  # line length
+  "E402",  # import not at top (optional deps patterns)
+  "E741",  # ambiguous name
+]
+
+[lint.per-file-ignores]
+"scripts/*" = ["E402", "F401"]
+"tests/*" = ["E402"]
