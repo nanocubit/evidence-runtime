@@ -12,6 +12,12 @@
 - Matcher + aggregation moved into `evidence_runtime/evalgt.py` so the measuring device is tested.
 
 ### Added
+- **MCP server** (`mcp_server.py`) — stdio tools `extract_page` (schema fields +
+  provenance) and `extract_health`; talks to the HTTP service so telemetry has a single
+  writer, with an in-process fallback when the service is down.
+- `scripts/avoidance_report.py` + `evidence_runtime/economy.py` — headline economics from
+  telemetry: `browser_avoidance_rate`, `llm_avoidance_rate`, `provenance_coverage`,
+  latency p50/p95 and recorded escalation reasons (auditable, not asserted).
 - **AdaptiveRouter is wired** into `service.extract_async`: each run records
   `route:<backend>:<reason>`, escalation calls `record_fallback` (in-memory + optional JSONL
   training set via `EVIDENCE_ROUTER_TELEMETRY`), and `ExtractionRun.fallback_level` is set.
@@ -21,6 +27,10 @@
 - Tests: `tests/test_router.py`, `tests/test_metrics_honesty.py` — suite now **51 passed / 3 skipped**.
 
 ### Fixed
+- `normalize_html` crashed on a valueless `<a href>` (selectolax yields `{'href': None}`,
+  and `dict.get("href", "")` still returns `None`) — because snapshotting is on by default
+  in the service, **every such page was reported `failed`**. Found by the first HTTP-service
+  call; fixed in `evidence_runtime/normalize.py`, regression test added.
 - `ruff check .` is clean (4 lint errors in `scripts/verify_cli.py`).
 
 ## [Unreleased]

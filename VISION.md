@@ -18,6 +18,11 @@
   `failed_but_complete`.
 - **Published baseline** — `scripts/baseline_compare.py` measures L1 against library-only
   extraction (completeness + latency) instead of asserting the gap.
+- **Runnable service + MCP** — the runtime runs as an HTTP service (`/extract`) and is
+  exposed on the MCP bus as `extract_page` / `extract_health`, so it can sit between a
+  search layer and a browser in one agent plan.
+- **Headline economics** — `browser_avoidance_rate` / `llm_avoidance_rate` / `provenance_coverage`
+  computed from telemetry (`scripts/avoidance_report.py`).
 
 Still open: ground-truth *scale*, L2 gap-fill tuning, dynamic confidence (§4), domain
 profiles (§6), ML router (§2 Phase 1), cost-per-fact.

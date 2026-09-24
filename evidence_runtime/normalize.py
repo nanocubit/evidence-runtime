@@ -58,7 +58,9 @@ def _extract_sections(tree: HTMLParser) -> list[dict[str, Any]]:
 def _extract_links(tree: HTMLParser, base_url: str) -> list[dict[str, str]]:
     links = []
     for node in tree.css("a[href]"):
-        href = node.attributes.get("href", "").strip()
+        # selectolax returns {'href': None} for a valueless `<a href>`, and
+        # dict.get(key, default) then yields None — coerce before .strip().
+        href = (node.attributes.get("href") or "").strip()
         if href.startswith("http"):
             links.append({"href": href, "text": node.text(strip=True) or ""})
     return links[:200]  # cap to avoid huge snapshots

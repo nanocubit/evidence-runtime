@@ -63,6 +63,36 @@ PYTHONPATH=. python scripts/evaluate_gt.py \
 PYTHONPATH=. python scripts/baseline_compare.py --limit 6
 ```
 
+### Run as a service + MCP (v0.4.1)
+
+```bash
+# HTTP service (FastAPI) — schema extraction with provenance
+python -m uvicorn evidence_runtime.api:app --host 127.0.0.1 --port 8090
+curl -X POST http://127.0.0.1:8090/extract \
+  -H 'Content-Type: application/json' \
+  -d '{"url":"https://docs.python.org/3/library/asyncio.html","schema":{"fields":{"title":{"type":"string"},"main_text":{"type":"string"}}}}'
+
+# MCP (stdio) — extract_page / extract_health, for agent buses
+ER_SERVICE_URL=http://127.0.0.1:8090 python mcp_server.py
+```
+
+Headline economics, computed from telemetry instead of asserted:
+
+```bash
+python scripts/avoidance_report.py --output reports/avoidance_report.json
+# browser_avoidance_rate, llm_avoidance_rate, provenance_coverage, latency p50/p95
+```
+
+### Position in a chain
+
+```
+search layer (find URLs) → evidence-runtime L1 (extract + provenance) → L3 (render) → browser (interact)
+```
+
+The point of the first arrow: a plain text fetch returns prose, this runtime returns
+facts with selector / backend / content hash, and reports how often the browser and the
+LLM were avoided. See `reports/avoidance_report.json` for the current numbers.
+
 ## Architecture
 
 ```
