@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "n": 6,
+    "l1_mean_completeness": 1.0,
+    "baseline_mean_completeness": 0.305,
+    "delta": 0.695,
+    "l1_mean_latency_ms": 5044.6,
+    "baseline_mean_latency_ms": 1411.9,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0
+  },
+  "results": [
+    {
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "l1": {
+        "status": "success",
+        "got": [
+          "description",
+          "source",
+          "title",
+          "version"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 11307.6
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.25,
+        "latency_ms": 549.8601239960408
+      },
+      "delta_completeness": 0.75
+    },
+    {
+      "url": "https://docs.djangoproject.com/en/5.0/topics/db/models/",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+      "l1": {
+        "status": "success",
+        "got": [
+          "description",
+          "source",
+          "title",
+          "version"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 8529.6
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.25,
+        "latency_ms": 2796.902201997
+      },
+      "delta_completeness": 0.75
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/first-steps/",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "source"
+      ],
+      "l1": {
+        "status": "partial",
+        "got": [
+          "description",
+          "source",
+          "title"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 2288.7
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.333,
+        "latency_ms": 1073.1526179952198
+      },
+      "delta_completeness": 0.667
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "source"
+      ],
+      "l1": {
+        "status": "partial",
+        "got": [
+          "description",
+          "source",
+          "title"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 2778.1
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.333,
+        "latency_ms": 944.9618110011215
+      },
+      "delta_completeness": 0.667
+    },
+    {
+      "url": "https://docs.docker.com/get-started/overview/",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "source"
+      ],
+      "l1": {
+        "status": "partial",
+        "got": [
+          "description",
+          "source",
+          "title"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 1572.6
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.333,
+        "latency_ms": 656.527767998341
+      },
+      "delta_completeness": 0.667
+    },
+    {
+      "url": "https://react.dev/learn/thinking-in-react",
+      "class": "docs",
+      "required": [
+        "title",
+        "description",
+        "source"
+      ],
+      "l1": {
+        "status": "partial",
+        "got": [
+          "description",
+          "source",
+          "title"
+        ],
+        "completeness": 1.0,
+        "latency_ms": 3790.7
+      },
+      "baseline": {
+        "status": "ok",
+        "got": [
+          "title"
+        ],
+        "completeness": 0.333,
+        "latency_ms": 2450.154059995839
+      },
+      "delta_completeness": 0.667
+    }
+  ]
+}

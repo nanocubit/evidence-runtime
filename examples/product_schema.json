@@ -1,0 +1,52 @@
+{
+  "fields": {
+    "name": {
+      "type": "string",
+      "selectors": [
+        "meta[property=\"og:title\"]",
+        "h1",
+        "[itemprop=\"name\"]"
+      ]
+    },
+    "price": {
+      "type": "number",
+      "selectors": [
+        "meta[property=\"product:price:amount\"]",
+        "[data-price]",
+        "[itemprop=\"price\"]",
+        ".price",
+        ".cost"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "selectors": [
+        "meta[property=\"product:price:currency\"]",
+        "[itemprop=\"priceCurrency\"]"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "selectors": [
+        "meta[name=\"description\"]",
+        "[itemprop=\"description\"]",
+        "main"
+      ]
+    },
+    "brand": {
+      "type": "string",
+      "selectors": [
+        "meta[property=\"product:brand\"]",
+        "[itemprop=\"brand\"]",
+        ".brand"
+      ]
+    },
+    "availability": {
+      "type": "boolean",
+      "selectors": [
+        "meta[property=\"product:availability\"]",
+        "[itemprop=\"availability\"]"
+      ]
+    }
+  }
+}
