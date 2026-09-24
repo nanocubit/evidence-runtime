@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Test / cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime artifacts
+*.duckdb
+*.duckdb.wal
+runtime.duckdb
+snapshots/
+.cache/
+
+# Local logs & old benchmark dumps at repo root
+*.pid
+*.log
+benchmark_*.json
+benchmark_*.log
+url_probe*.txt
+url_probe*.log
+candidate_probe.txt
+
+# Keep curated reports optionally — ignore bulky local ones
+# reports/*.log
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Playwright
+playwright-report/
+test-results/
+
+# Packaging leftovers
+evidence-runtime-v0.3.0/
+evidence-runtime-v0.3.0.zip
+*.zip
